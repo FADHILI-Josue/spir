@@ -1,12 +1,15 @@
 import MainTemplate from '@/templates/MainTemplate'
-import HomeBanner from './components/home/HomeBanner'
-import Navbar from './components/Navbar'
+import HomeBanner from '../components/home/HomeBanner'
+import Navbar from '../components/Navbar'
 import { Button } from '@/components/ui/button'
-import Images from './components/home/Images'
+import Images from '../components/home/Images'
 import Marquee from 'react-fast-marquee'
 import { balance_seekers } from '@/costants'
 import Image from 'next/image'
-import { Dot } from 'lucide-react'
+import { Dot, Phone } from 'lucide-react'
+import { phoneimage } from '@/assets'
+import PhoneComponent from '@/components/PhoneComponent'
+import BestForBodySection from '../components/home/BestForBodySection'
 
 export default function Home() {
   return (
@@ -26,18 +29,21 @@ export default function Home() {
             </div>
           </div>
           {/* IMAGES */}
-          <div className='w-full sticky top-0'>
+          <div className='w-full sticky -z-10 top-0'>
             <Images />
           </div>
-            <Marquee speed={100} className='w-full bg-white pt-10 pb-14 gap-2'>
-              {balance_seekers.map((e, i) => <div className='flex items-center gap-2'>
-                <Dot className='h-10 w-10 text-slate-900' />
-                <Image key={i} src={e.image} alt='balance seeker' className='h-10' />
-                <p className='text-2xl text-stone-800'>{e.desc}</p>
-              </div>)}
-            </Marquee>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
+          <Marquee speed={100} className='w-full bg-white pt-10 pb-14 gap-2'>
+            {balance_seekers.map((e, i) => <div key={i} className='flex items-center gap-2'>
+              <Dot className='h-10 w-10 text-slate-900' />
+              <Image key={i} src={e.image} alt='balance seeker' className='h-10' />
+              <p className='text-2xl text-stone-800'>{e.desc}</p>
+            </div>)}
+          </Marquee>
+          <PhoneComponent />
+          <div className='bg-stone-200 w-full z-0 flex justify-between px-20 pb-44 items-center'>
+            <BestForBodySection />
+          </div>
+          <div className=''></div>
           <div>alskfjaslkdfj</div>
           <div>alskfjaslkdfj</div>
           <div>alskfjaslkdfj</div>

@@ -1,5 +1,5 @@
 'use client'
-import Navbar from '@/app/components/Navbar'
+import Navbar from '@/components/Navbar'
 import { usePathname, useRouter } from 'next/navigation'
 import { FC, ReactNode, useEffect, useState } from 'react'
 
@@ -18,7 +18,7 @@ const MainTemplate: FC<MainTemplateProps> = ({children,isMain=false}) => {
 		setActive(path);
 	}, [router]);
 
-  return <div className='w-full flex flex-col items-center'>
+  return <div className='w-full  flex flex-col items-center'>
     {!isMain && <Navbar />}
     {children}
     </div>
