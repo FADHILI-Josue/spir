@@ -1,3 +1,4 @@
+// images
 export { default as BannerBg } from './images/homebanner.webp'
 export { default as goldRing } from './images/gold-ring.webp'
 export { default as blackRing } from './images/black-ring.webp'
@@ -12,4 +13,12 @@ export { default as roseGoldIcon } from './images/rose-gold-icon.webp'
 export { default as washingtonLogo } from './images/washington-post-logo.svg'
 export { default as usaTodayLogo } from './images/usa-today-logo.svg'
 export { default as architechuralTodayLogo } from './images/architectural-digest-logo.svg'
-export { default as phoneimage } from './images/phoneimage.webp'
+export { default as homePhone } from './images/home-phone.webp'
+export { default as readinessphone } from './images/readiness-phone.webp'
+export { default as runningPhone } from './images/running-phone.webp'
+export { default as sleepPhone } from './images/sleep-phone.webp'
+export { default as SleepingMan } from './images/sleeping-man.webp'
+export { default as fitness } from './images/fitness.webp'
+
+// icons
+

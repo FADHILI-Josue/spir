@@ -7,9 +7,12 @@ import Marquee from 'react-fast-marquee'
 import { balance_seekers } from '@/costants'
 import Image from 'next/image'
 import { Dot, Phone } from 'lucide-react'
-import { phoneimage } from '@/assets'
+
 import PhoneComponent from '@/components/PhoneComponent'
 import BestForBodySection from '../components/home/BestForBodySection'
+import YourComponent from '@/components/Cop'
+import Sleeptight from '@/components/home/sleep-tight'
+import Activity from '@/components/home/activity'
 
 export default function Home() {
   return (
@@ -40,10 +43,9 @@ export default function Home() {
             </div>)}
           </Marquee>
           <PhoneComponent />
-          <div className='bg-stone-200 w-full z-0 flex justify-between px-20 pb-44 items-center'>
             <BestForBodySection />
-          </div>
-          <div className=''></div>
+            <Sleeptight />
+            <Activity />
           <div>alskfjaslkdfj</div>
           <div>alskfjaslkdfj</div>
           <div>alskfjaslkdfj</div>
