@@ -17,6 +17,7 @@ import Readiness from '@/components/home/Readiness'
 import AccurateFinger from '@/components/home/AccurateFinger'
 import { cn } from '@/lib/utils'
 import OuraJourney from '@/components/home/OuraJourney'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -62,17 +63,22 @@ export default function Home() {
             <h1 className='text-6xl tracking-normal text-center leading-none max-w-4xl font-extralight'>We exist to <em className='font-serif'>empower</em> everyone to realize health as a daily practice.</h1>
             <Button variant={'outline'} size={'lg'} className='rounded-full p-6 border-stone-400 text-stone-700'>Learn More About Oura</Button>
           </div>
-          <div className='w-full flex flex-col items-center bg-[#E6DED3] px-36'>
+          <div className='w-full flex flex-col items-center bg-[#E6DED3]  px-36'>
             <div className="grid w-full grid-cols-3 gap-20">
-            {devotions.map((e, i)=><div key={i} className='space-y-5'>
-              <Image src={e.image} alt={e.title} />
-              <h2 className='font-medium text-lg'>{e.title}</h2>
-              <p className='text-md'>{e.desc}</p>
-            </div>)}
+              {devotions.map((e, i) => <div key={i} className='space-y-5'>
+                <Image src={e.image} alt={e.title} />
+                <h2 className='font-medium text-lg'>{e.title}</h2>
+                <p className='text-md'>{e.desc}</p>
+              </div>)}
             </div>
           </div>
-            <OuraJourney />
-          <div>alskfjaslkdfj</div>
+          <OuraJourney />
+          <div className='w-full flex flex-col items-center px-32 bg-[#E6DED3]'>
+            <Link href={'https://ouraring.com/blog/how-accurate-is-oura'} className="w-full text-stone-900 border-y py-5 my-20 border-slate-400">
+            * <span className='underline'>ouraring.com/blog/how-accurate-is-oura</span>
+            </Link>
+
+          </div>
           <div>alskfjaslkdfj</div>
           <div>alskfjaslkdfj</div>
           <div>alskfjaslkdfj</div>
