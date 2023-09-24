@@ -1,6 +1,5 @@
 'use client'
-import { useConfig } from '@/app/context/configProvider';
-import { SleepingMan, fitness, homePhone, runningPhone, sleepPhone } from '@/assets';
+import { SleepingMan, fitness, homePhone, readinessphone, runningPhone, sleepPhone } from '@/assets';
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -8,6 +7,7 @@ import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer';
 import Sleepicon from '../ui/sleepicon';
 import FireIcon from '../ui/FireIcon';
+import { useConfig } from '@/context/configProvider';
 
 
 interface ActivitySectionProps {
@@ -18,7 +18,7 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
     const [reachTop, setreachTop] = useState(false);
 
 
-    const topRef = useRef<HTMLDivElement | null>(null);
+    const topRef = useRef<HTMLButtonElement | null>(null);
     const { setImage, setColor, color } = useConfig()
     useEffect(() => {
         const handleScroll = () => {
@@ -37,12 +37,12 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
 
     const top = useMemo(() => {
         if (reachTop) {
-            setImage(runningPhone)
-            setColor('#D0ECF5')
+            setImage(readinessphone)
+            setColor('#E6DED3')
             return true
         }
-        setImage(sleepPhone)
-        setColor('#101926')
+        setImage(runningPhone)
+        setColor('#D0ECF5')
         return false
     }, [reachTop])
 
@@ -59,7 +59,7 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
             <h1 className={cn('', color === '#D0ECF5' ? 'text-stone-700' : 'text-white')}>
                 Whether you’re running a marathon or running an errand, Oura tracks your movement, steps, heart rate, and recovery. Discover your ideal balance between activity and recovery to reach your personal fitness goals.
             </h1>
-            <Button variant={'outline'} size={'lg'} className={cn('rounded-full w-fit my-4', 'text-blue-300 border-slate-600 hover:bg-[#D0ECF5] hover:text-slate-800')}>More About Sleep</Button>
+            <Button variant={'outline'} size={'lg'} ref={topRef} className={cn('rounded-full w-fit my-4', 'text-[#101926] border-slate-600 hover:bg-[#101926] hover:text-white')}>More About Activity</Button>
             {/* ref={topRef} to the last element */}
         </div>
     </div>

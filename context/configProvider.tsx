@@ -9,6 +9,8 @@ interface ConfigContextType {
   setColor: (newColor: string) => void;
   image: StaticImageData,
   setImage: (newImage: StaticImageData) => void;
+  phoneOpen: boolean,
+  setPhoneOpen: (value:boolean) => void
 }
 
 const ConfigContext = createContext<ConfigContextType | undefined>(undefined);
@@ -18,12 +20,13 @@ interface Iprops {
 }
 // Define the ColorProvider component
 const ConfigProvider: React.FC<Iprops> = ({ children }) => {
-  const [color, setColor] = useState<string>('white');
+  const [color, setColor] = useState<string>('#E6DED3');
   const [image, setImage] = useState<StaticImageData>(homePhone);
+  const [phoneOpen, setPhoneOpen] = useState<boolean>(true);
 
 
   return (
-    <ConfigContext.Provider value={{ color, setColor, image, setImage }}>
+    <ConfigContext.Provider value={{ color, setColor, image, setImage, phoneOpen, setPhoneOpen }}>
       {children}
     </ConfigContext.Provider>
   );

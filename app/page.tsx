@@ -13,6 +13,7 @@ import BestForBodySection from '../components/home/BestForBodySection'
 import YourComponent from '@/components/Cop'
 import Sleeptight from '@/components/home/sleep-tight'
 import Activity from '@/components/home/activity'
+import Readiness from '@/components/home/Readiness'
 
 export default function Home() {
   return (
@@ -46,7 +47,8 @@ export default function Home() {
             <BestForBodySection />
             <Sleeptight />
             <Activity />
-          <div>alskfjaslkdfj</div>
+            <Readiness />
+          
           <div>alskfjaslkdfj</div>
           <div>alskfjaslkdfj</div>
           <div>alskfjaslkdfj</div>

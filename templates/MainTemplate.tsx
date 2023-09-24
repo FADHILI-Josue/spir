@@ -1,6 +1,6 @@
 'use client'
-import { ConfigProvider } from '@/app/context/configProvider'
 import Navbar from '@/components/Navbar'
+import { ConfigProvider } from '@/context/configProvider'
 import { usePathname, useRouter } from 'next/navigation'
 import { FC, ReactNode, useEffect, useState } from 'react'
 

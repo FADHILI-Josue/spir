@@ -19,6 +19,7 @@ export { default as runningPhone } from './images/running-phone.webp'
 export { default as sleepPhone } from './images/sleep-phone.webp'
 export { default as SleepingMan } from './images/sleeping-man.webp'
 export { default as fitness } from './images/fitness.webp'
+export { default as readiness } from './images/readiness.jpg'
 
 // icons
 

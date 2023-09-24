@@ -1,5 +1,4 @@
 'use client'
-import { useConfig } from '@/app/context/configProvider';
 import { SleepingMan, homePhone, runningPhone, sleepPhone } from '@/assets';
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils';
@@ -7,6 +6,7 @@ import Image from 'next/image';
 import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer';
 import Sleepicon from '../ui/sleepicon';
+import { useConfig } from '@/context/configProvider';
 
 
 interface BestForBodySectionProps {
@@ -48,11 +48,11 @@ const Sleeptight: FC<BestForBodySectionProps> = ({ }) => {
     return <div className={cn('w-full z-0 flex justify-between pl-20 pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }}>
         <div className='ml-10 max-w-[27%] flex flex-col gap-4'>
             <div className="flex items-center gap-3">
-                <Sleepicon color={color === 'white' ? 'black' : '#D0ECF5'} />
-                <span className={cn(color === 'white' ? 'text-stone-700' : 'text-[#D0ECF5]')}>sleep</span>
+                <Sleepicon color={color === '#E6DED3' ? 'black' : '#D0ECF5'} />
+                <span className={cn(color === '#E6DED3' ? 'text-stone-700' : 'text-[#D0ECF5]')}>sleep</span>
             </div>
             <h1 className={cn('leading-tight text-3xl', color === 'white' ? 'text-stone-700' : 'text-white')}>Sleep tight with the industry leading sleep tracker.</h1>
-            <h1 className={cn('', color === 'white' ? 'text-stone-700' : 'text-white')}>
+            <h1 className={cn('', color === '#E6DED3' ? 'text-stone-700' : 'text-white')}>
                 Better health, brighter moods, more energy — it all starts with sleep. Wake up to in-depth analysis about your deep sleep, light sleep, REM sleep, blood oxygen levels, and more. Small adjustments to your daily routine can improve your sleep and transform how you feel.
             </h1>
             <Button variant={'outline'} size={'lg'} className={cn('rounded-full w-fit my-4', 'text-blue-300 border-slate-600 hover:bg-[#D0ECF5] hover:text-slate-800')}>More About Sleep</Button>
