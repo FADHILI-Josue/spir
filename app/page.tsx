@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import { Button } from '@/components/ui/button'
 import Images from '../components/home/Images'
 import Marquee from 'react-fast-marquee'
-import { balance_seekers } from '@/costants'
+import { balance_seekers, devotions } from '@/costants'
 import Image from 'next/image'
 import { Dot, Phone } from 'lucide-react'
 
@@ -14,6 +14,9 @@ import YourComponent from '@/components/Cop'
 import Sleeptight from '@/components/home/sleep-tight'
 import Activity from '@/components/home/activity'
 import Readiness from '@/components/home/Readiness'
+import AccurateFinger from '@/components/home/AccurateFinger'
+import { cn } from '@/lib/utils'
+import OuraJourney from '@/components/home/OuraJourney'
 
 export default function Home() {
   return (
@@ -44,18 +47,31 @@ export default function Home() {
             </div>)}
           </Marquee>
           <PhoneComponent />
-            <BestForBodySection />
-            <Sleeptight />
-            <Activity />
-            <Readiness />
-          
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
+          <BestForBodySection />
+          <Sleeptight />
+          <Activity />
+          <Readiness />
+          <AccurateFinger />
+          <div className='w-full flex flex-col items-center bg-[#E6DED3] space-y-6 pb-16'>
+            <h1 className='text-5xl font-light'>Trusted by experts.</h1>
+            <p className='max-w-2xl text-stone-900 text-xl text-center'>Oura partners with experts across the field to conduct research and advise in development of features.</p>
+            <Button variant={'outline'} size={'lg'} className={'rounded-full px-8 py-[1.7rem] text-md'}>Shop Now</Button>
+          </div>
+          <div className='w-full bg-[#E6DED3]'>to add image carousel</div>
+          <div className='w-full bg-[#E6DED3] flex flex-col items-center space-y-8 pb-20'>
+            <h1 className='text-6xl tracking-normal text-center leading-none max-w-4xl font-extralight'>We exist to <em className='font-serif'>empower</em> everyone to realize health as a daily practice.</h1>
+            <Button variant={'outline'} size={'lg'} className='rounded-full p-6 border-stone-400 text-stone-700'>Learn More About Oura</Button>
+          </div>
+          <div className='w-full flex flex-col items-center bg-[#E6DED3] px-36'>
+            <div className="grid w-full grid-cols-3 gap-20">
+            {devotions.map((e, i)=><div key={i} className='space-y-5'>
+              <Image src={e.image} alt={e.title} />
+              <h2 className='font-medium text-lg'>{e.title}</h2>
+              <p className='text-md'>{e.desc}</p>
+            </div>)}
+            </div>
+          </div>
+            <OuraJourney />
           <div>alskfjaslkdfj</div>
           <div>alskfjaslkdfj</div>
           <div>alskfjaslkdfj</div>

@@ -20,6 +20,13 @@ export { default as sleepPhone } from './images/sleep-phone.webp'
 export { default as SleepingMan } from './images/sleeping-man.webp'
 export { default as fitness } from './images/fitness.webp'
 export { default as readiness } from './images/readiness.jpg'
+export { default as girlSleeping } from './images/girl-sleeping-on-mom.webp'
+export { default as girlWithTowel } from './images/girl-with-towel.webp'
+export { default as manWithOura } from './images/man-with-oura.webp'
+export { default as manWalking } from './images/man-walking.webp'
+export { default as fingersOnWater } from './images//fingers-water.webp'
+export { default as manCalling } from './images/man-calling.webp'
+export { default as ringOnRing } from './images/ring-on-ring.webp'
 
 // icons
 

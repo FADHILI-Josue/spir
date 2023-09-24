@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
  
+:root {
+  overflow-x: hidden;
+}
 
 @layer base {
   :root {
@@ -155,4 +158,33 @@ span:hover::after {
 .navlink:hover::before,
 .navlink:hover::after {
   transition: transform 0.3s, width 0.3s;
+}
+
+
+
+
+
+
+body {
+  font-family: system-ui;
+  margin: 0;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex.fill {
+  height: 100%;
+}
+
+.flex.center {
+  justify-content: center;
 }
