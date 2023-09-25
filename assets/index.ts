@@ -30,3 +30,13 @@ export { default as ringOnRing } from './images/ring-on-ring.webp'
 
 // icons
 
+export { default as instagram } from './icons/ig.svg'
+export { default as twitter } from './icons/twitter.svg'
+export { default as facebook } from './icons/facebook.svg'
+export { default as youtube } from './icons/youtube.svg'
+export { default as tiktok } from './icons/tiktok.svg'
+export { default as pinterest } from './icons/pinterest.svg'
+
+export { default as accepted } from './icons/accepted.svg'
+
+

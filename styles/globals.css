@@ -79,6 +79,15 @@
   }
 }
 
+@layer components {
+  .iconfooter {
+    @apply text-white
+  }
+  .iconfootercontainer {
+    @apply bg-main hover:bg-black w-fit p-2 transition-all duration-200 rounded-full
+  }
+}
+
 /* navlink {
   position: relative;
   text-decoration: none;
@@ -176,10 +185,6 @@ body {
   box-sizing: border-box;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-}
 
 .flex.fill {
   height: 100%;
@@ -187,4 +192,30 @@ body {
 
 .flex.center {
   justify-content: center;
+}
+
+@keyframes eraseLeft {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes eraseRight {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.animate-eraseLeft {
+  animation: eraseLeft 0.3s ease forwards;
+}
+
+.animate-eraseRight {
+  animation: eraseRight 0.3s ease forwards;
 }

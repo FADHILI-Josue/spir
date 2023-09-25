@@ -18,6 +18,7 @@ import AccurateFinger from '@/components/home/AccurateFinger'
 import { cn } from '@/lib/utils'
 import OuraJourney from '@/components/home/OuraJourney'
 import Link from 'next/link'
+import Footer from '@/components/home/Footer'
 
 export default function Home() {
   return (
@@ -79,29 +80,7 @@ export default function Home() {
             </Link>
 
           </div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-          <div>alskfjaslkdfj</div>
-
+          <Footer />
         </div>
       </MainTemplate>
     </main>

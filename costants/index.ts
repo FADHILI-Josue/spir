@@ -1,5 +1,7 @@
-import { architechuralTodayLogo, fingersOnWater, manCalling, manWalking, usaTodayLogo, washingtonLogo } from "@/assets";
-import { DevotionItem, INavbarLink, IbalanceSeeker } from "@/utils/types";
+import { architechuralTodayLogo, facebook, fingersOnWater, instagram, manCalling, manWalking, pinterest, tiktok, twitter, usaTodayLogo, washingtonLogo, youtube } from "@/assets";
+import { DevotionItem, INavbarLink, IbalanceSeeker, footerItem } from "@/utils/types";
+import { StaticImageData } from "next/image";
+import React from "react";
 
 export const navbarLinks: INavbarLink[] = [
     {
@@ -54,4 +56,121 @@ export const devotions:DevotionItem[] = [
         title: 'Our commitment',
         desc: 'Oura takes data privacy seriously. We only use your data to power your experience and deliver your personal insights. We do not sell your data to third parties or use your data to sell advertising to other companies.'
     }
+]
+
+export const footerData:footerItem[] = [
+    {
+        title: 'Company',
+        members: [
+            {
+                title: 'About Us',
+                link: '#'
+            },
+            {
+                title: 'Leadership',
+                link: '#'
+            },
+            {
+                title: 'Medical Advisory Board',
+                link: '#'
+            },
+            {
+                title: 'Research & Validation',
+                link: '#'
+            },
+            {
+                title: 'Press',
+                link: '#'
+            },
+            {
+                title: 'Careers',
+                link: '#'
+            }
+        ]
+    },
+    {
+        title: 'Solutions',
+        members: [
+            {
+                title: 'Oura for Business',
+                link: '#'
+            },
+            {
+                title: 'Reproductive Health',
+                link: '#'
+            },
+            {
+                title: 'Developers',
+                link: '#'
+            }
+        ]
+    },
+    {
+        title: 'Support',
+        members: [
+            {
+                title: 'Getting Started',
+                link: '#'
+            },
+            {
+                title: 'Membership',
+                link: '#'
+            },
+            {
+                title: 'My Account',
+                link: '#'
+            },
+            {
+                title: 'Oura on the Web',
+                link: '#'
+            },
+            {
+                title: 'Sizing',
+                link: '#'
+            },
+            {
+                title: 'Best Buy® U.S. Store Locator',
+                link: '#'
+            },
+            {
+                title: 'Help',
+                link: '#'
+            },
+            {
+                title: 'Contact',
+                link: '#'
+            },
+            {
+                title: 'Extra Charger',
+                link: '#'
+            }
+        ]
+    },
+    
+]
+export const loweFooterData: {title: string, link: string}[]  = [
+    {
+        title: 'Terms & Conditions',
+        link: '#'
+    },
+    {
+        title: 'Privacy policy',
+        link: '#'
+    },
+    {
+        title: 'IP Notice',
+        link: '#'
+    },
+    {
+        title: 'Accessibility',
+        link: '#'
+    }
+]
+export const footerIcons:StaticImageData[]= [
+    instagram,
+    twitter,
+    facebook,
+    youtube,
+    tiktok,
+    pinterest
 ]

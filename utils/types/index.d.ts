@@ -15,3 +15,11 @@ export interface DevotionItem {
     title: string,
     desc: string
 }
+
+export interface footerItem {
+    title: string,
+    members: {
+        link: string,
+        title: string
+    }[]
+}
