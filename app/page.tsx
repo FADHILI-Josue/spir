@@ -10,7 +10,6 @@ import { Dot, Phone } from 'lucide-react'
 
 import PhoneComponent from '@/components/PhoneComponent'
 import BestForBodySection from '../components/home/BestForBodySection'
-import YourComponent from '@/components/Cop'
 import Sleeptight from '@/components/home/sleep-tight'
 import Activity from '@/components/home/activity'
 import Readiness from '@/components/home/Readiness'
@@ -20,11 +19,13 @@ import OuraJourney from '@/components/home/OuraJourney'
 import Link from 'next/link'
 import Footer from '@/components/home/Footer'
 import Testimonial from '@/components/Testimonial'
+import ScrollHeader from '@/components/ScrollHeader'
 
 export default function Home() {
   return (
-    <main className='w-full flex flex-col'>
+    <main className='w-full relative flex flex-col'>
       <MainTemplate isMain>
+        <ScrollHeader />
         <div className='bg-white text-sm z-20 w-full flex justify-center items-center py-3'>
           <p className='text-slate-800 font-semibold'> <a href="#" className='underline'>Shop now</a> and use your HSA/FSA funds at check out.</p>
         </div>
@@ -34,7 +35,7 @@ export default function Home() {
           <div className='w-full flex justify-around mt-20 mb-10'>
             <span className='text-slate-900 text-5xl max-w-md leading-tight'>Your health. Your style. Your way.</span>
             <div className="flex flex-col justify-between">
-              <p className='text-gray-900 max-w-md'>Sleek, comfortable, accurate. Oura Ring fits seamlessly into your life, all night and all day.</p>
+              <p className='text-gray-900 max-w-md'>Sleek, comfortable, accurate. spir fits seamlessly into your life, all night and all day.</p>
               <Button className='w-fit py-2 rounded-full px-4' variant={'outline'} size={'lg'}>Shop Now</Button>
             </div>
           </div>
@@ -57,7 +58,7 @@ export default function Home() {
           <AccurateFinger />
           <div className='w-full flex flex-col items-center bg-[#E6DED3] space-y-6 pb-16'>
             <h1 className='text-5xl font-light'>Trusted by experts.</h1>
-            <p className='max-w-2xl text-stone-900 text-xl text-center'>Oura partners with experts across the field to conduct research and advise in development of features.</p>
+            <p className='max-w-2xl text-stone-900 text-xl text-center'>Spir partners with experts across the field to conduct research and advise in development of features.</p>
             <Button variant={'outline'} size={'lg'} className={'rounded-full px-8 py-[1.7rem] text-md'}>Shop Now</Button>
           </div>
           <div className='w-full bg-[#E6DED3]'>
@@ -65,9 +66,9 @@ export default function Home() {
           </div>
           <div className='w-full bg-[#E6DED3] flex flex-col items-center space-y-8 pb-20'>
             <h1 className='text-6xl tracking-normal text-center leading-none max-w-4xl font-extralight'>We exist to <em className='font-serif'>empower</em> everyone to realize health as a daily practice.</h1>
-            <Button variant={'outline'} size={'lg'} className='rounded-full p-6 border-stone-400 text-stone-700'>Learn More About Oura</Button>
+            <Button variant={'outline'} size={'lg'} className='rounded-full p-6 border-stone-400 text-stone-700'>Learn More About Spir</Button>
           </div>
-          <div className='w-full flex flex-col items-center bg-[#E6DED3]  px-36'>
+          <div className='w-full flex flex-col items-center bg-[#E6DED3] pb-20  px-36'>
             <div className="grid w-full grid-cols-3 gap-20">
               {devotions.map((e, i) => <div key={i} className='space-y-5'>
                 <Image src={e.image} alt={e.title} />
@@ -79,7 +80,7 @@ export default function Home() {
           <OuraJourney />
           <div className='w-full flex flex-col items-center px-32 bg-[#E6DED3]'>
             <Link href={'https://ouraring.com/blog/how-accurate-is-oura'} className="w-full text-stone-900 border-y py-5 my-20 border-slate-400">
-              * <span className='underline'>ouraring.com/blog/how-accurate-is-oura</span>
+              * <span className='underline'>spir.com/blog/how-accurate-is-spir</span>
             </Link>
 
           </div>

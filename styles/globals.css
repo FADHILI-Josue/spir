@@ -136,7 +136,7 @@ span:hover::after {
   bottom: 0;
   width: 50%;
   height: 2px;
-  background: black;
+  background: rgb(230, 160, 8);
   animation-timing-function: ease-out;
 }
 
@@ -173,17 +173,6 @@ span:hover::after {
 
 
 
-
-body {
-  font-family: system-ui;
-  margin: 0;
-}
-
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
 
 
 .flex.fill {

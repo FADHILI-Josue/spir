@@ -26,7 +26,7 @@ const PhoneComponent: FC<PhoneComponentProps> = ({ }) => {
                 
                         transition={{ duration: 1 }}
                         ref={stickyRef}
-                        src={image} alt='oura phone image' />
+                        src={image} alt='spir phone image' />
                     {/* <Image src={image}  alt='oura home phone image' className='h-full w-full object-contain fade-in-out transition-opacity duration-500' /> */}
                 </div>
             </div>

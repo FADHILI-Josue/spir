@@ -73,8 +73,8 @@ const BestForBodySection: FC<BestForBodySectionProps> = ({ }) => {
             Do what's best for your body with <em>three daily scores.</em>
         </h1>
         <div className='max-w-[30%] mt-[20%]'>
-            <p className={cn('leading-snug text-stone-800 text-lg mb-8', color !== '#E6DED3' && 'text-white')}>Sleep, Readiness, and Activity. Your scores tell you how your body feels and what your body needs, every second of every day. You'll know when you need more sleep, when you might be getting sick, when it's time to push yourself — and more — with a personalized experience on the Oura App.</p>
-            <Button variant={'outline'} size={'lg'} className={cn('rounded-full', color !== '#E6DED3' && 'text-blue-300 border-slate-600')}>Oura Experience</Button>
+            <p className={cn('leading-snug text-stone-800 text-lg mb-8', color !== '#E6DED3' && 'text-white')}>Sleep, Readiness, and Activity. Your scores tell you how your body feels and what your body needs, every second of every day. You'll know when you need more sleep, when you might be getting sick, when it's time to push yourself — and more — with a personalized experience on the Spir App.</p>
+            <Button variant={'outline'} size={'lg'} className={cn('rounded-full', color !== '#E6DED3' && 'text-blue-300 border-slate-600')}>Spir Experience</Button>
         </div>
     </div>
 }
