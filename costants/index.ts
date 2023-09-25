@@ -1,4 +1,4 @@
-import { architechuralTodayLogo, facebook, fingersOnWater, instagram, manCalling, manWalking, pinterest, tiktok, twitter, usaTodayLogo, washingtonLogo, youtube } from "@/assets";
+import { architechuralTodayLogo, expertsGotlieb, expertsRobbins, facebook, fingersOnWater, instagram, manCalling, manWalking, mattWalker, pinterest, tiktok, twitter, usaTodayLogo, washingtonLogo, youtube } from "@/assets";
 import { DevotionItem, INavbarLink, IbalanceSeeker, footerItem } from "@/utils/types";
 import { StaticImageData } from "next/image";
 import React from "react";
@@ -173,4 +173,10 @@ export const footerIcons:StaticImageData[]= [
     youtube,
     tiktok,
     pinterest
+]
+
+export const IMAGES: StaticImageData[] = [
+    mattWalker,
+    expertsGotlieb,
+    expertsRobbins
 ]
