@@ -33,7 +33,7 @@ const Testimonial: FC<TestimonialProps> = ({}) => {
     <div className="flex flex-col">
       <div className="flex items-center gap-8 ml-10"> <ArrowLeft className='border border-stone-400 text-3xl rounded-full p-2' size={40} onClick={handlePrev}/> <p className='text-sm text-gray-700'>0{activeIndex+1} - 0{IMAGES.length}</p> <ArrowRight className='border border-stone-400 text-3xl rounded-full p-2' size={40} onClick={handleNext}/> </div>
       <div className="flex items-center overflow-x-hidden mt-[20%] gap-6 -translate-x-[25%]">
-        {IMAGES.filter((e)=>IMAGES.indexOf(e)!== activeIndex).map((e, i)=><div className={cn('w-1/2', {'order-last': activeIndex !== 1 && i === 0})}><Carousel activeIndex={IMAGES.indexOf(e)} /></div>)}
+        {IMAGES.filter((e)=>IMAGES.indexOf(e)!== activeIndex).map((e, i)=><div key={i} className={cn('w-1/2', {'order-last': activeIndex !== 1 && i === 0})}><Carousel activeIndex={IMAGES.indexOf(e)} /></div>)}
       </div>
     </div>
     <div className="w-full h-[80vh]">
