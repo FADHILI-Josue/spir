@@ -70,7 +70,7 @@ const BestForBodySection: FC<BestForBodySectionProps> = ({ }) => {
 
     return <div className={cn('w-full z-0 flex justify-between px-20 pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }}>
         <h1 className={cn('ml-10 leading-tight mt-24 max-w-[26%] text-5xl', color !== '#E6DED3' && 'text-white')} ref={topRef}>
-            Do what's best for your body with <em>three daily scores.</em>
+            Do what's best for your body with <em className='font-sans'>three daily scores.</em>
         </h1>
         <div className='max-w-[30%] mt-[20%]'>
             <p className={cn('leading-snug text-stone-800 text-lg mb-8', color !== '#E6DED3' && 'text-white')}>Sleep, Readiness, and Activity. Your scores tell you how your body feels and what your body needs, every second of every day. You'll know when you need more sleep, when you might be getting sick, when it's time to push yourself — and more — with a personalized experience on the Spir App.</p>

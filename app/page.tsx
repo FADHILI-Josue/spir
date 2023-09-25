@@ -20,10 +20,12 @@ import Link from 'next/link'
 import Footer from '@/components/home/Footer'
 import Testimonial from '@/components/Testimonial'
 import ScrollHeader from '@/components/ScrollHeader'
+import MovingRectangle from '@/components/SideScroll'
 
 export default function Home() {
   return (
     <main className='w-full relative flex flex-col'>
+        <MovingRectangle size={23} />
       <MainTemplate isMain>
         <ScrollHeader />
         <div className='bg-white text-sm z-20 w-full flex justify-center items-center py-3'>
@@ -65,7 +67,7 @@ export default function Home() {
             <Testimonial />
           </div>
           <div className='w-full bg-[#E6DED3] flex flex-col items-center space-y-8 pb-20'>
-            <h1 className='text-6xl tracking-normal text-center leading-none max-w-4xl font-extralight'>We exist to <em className='font-serif'>empower</em> everyone to realize health as a daily practice.</h1>
+            <h1 className='text-6xl tracking-normal text-center leading-none max-w-4xl font-extralight'>We exist to <em className='font-sans'>empower</em> everyone to realize health as a daily practice.</h1>
             <Button variant={'outline'} size={'lg'} className='rounded-full p-6 border-stone-400 text-stone-700'>Learn More About Spir</Button>
           </div>
           <div className='w-full flex flex-col items-center bg-[#E6DED3] pb-20  px-36'>

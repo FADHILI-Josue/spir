@@ -21,8 +21,12 @@ module.exports = {
       ...screens,
       'large': '1024px',
       'foo': {'max': '1049px'},
+      'sup-large' : '1172px'
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inst)'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

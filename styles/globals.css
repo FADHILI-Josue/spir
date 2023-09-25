@@ -208,3 +208,16 @@ span:hover::after {
 .animate-eraseRight {
   animation: eraseRight 0.3s ease forwards;
 }
+
+.move {
+  animation: move 3s 1s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translatey(-250%);
+  }
+  100% {
+    transform: translatey(250%) ;
+  }
+}
