@@ -27,6 +27,9 @@ export { default as manWalking } from './images/man-walking.webp'
 export { default as fingersOnWater } from './images//fingers-water.webp'
 export { default as manCalling } from './images/man-calling.webp'
 export { default as ringOnRing } from './images/ring-on-ring.webp'
+export { default as expertsGotlieb } from './images/experts-gotlieb.webp'
+export { default as expertsRobbins } from './images/ring-on-ring.webp'
+export { default as mattWalker } from './images/matt-walker.webp'
 
 // icons
 

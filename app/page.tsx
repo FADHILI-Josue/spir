@@ -19,6 +19,7 @@ import { cn } from '@/lib/utils'
 import OuraJourney from '@/components/home/OuraJourney'
 import Link from 'next/link'
 import Footer from '@/components/home/Footer'
+import Testimonial from '@/components/Testimonial'
 
 export default function Home() {
   return (
@@ -59,7 +60,9 @@ export default function Home() {
             <p className='max-w-2xl text-stone-900 text-xl text-center'>Oura partners with experts across the field to conduct research and advise in development of features.</p>
             <Button variant={'outline'} size={'lg'} className={'rounded-full px-8 py-[1.7rem] text-md'}>Shop Now</Button>
           </div>
-          <div className='w-full bg-[#E6DED3]'>to add image carousel</div>
+          <div className='w-full bg-[#E6DED3]'>
+            <Testimonial />
+          </div>
           <div className='w-full bg-[#E6DED3] flex flex-col items-center space-y-8 pb-20'>
             <h1 className='text-6xl tracking-normal text-center leading-none max-w-4xl font-extralight'>We exist to <em className='font-serif'>empower</em> everyone to realize health as a daily practice.</h1>
             <Button variant={'outline'} size={'lg'} className='rounded-full p-6 border-stone-400 text-stone-700'>Learn More About Oura</Button>
@@ -76,7 +79,7 @@ export default function Home() {
           <OuraJourney />
           <div className='w-full flex flex-col items-center px-32 bg-[#E6DED3]'>
             <Link href={'https://ouraring.com/blog/how-accurate-is-oura'} className="w-full text-stone-900 border-y py-5 my-20 border-slate-400">
-            * <span className='underline'>ouraring.com/blog/how-accurate-is-oura</span>
+              * <span className='underline'>ouraring.com/blog/how-accurate-is-oura</span>
             </Link>
 
           </div>
