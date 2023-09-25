@@ -17,10 +17,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14  # Adjust the Node.js version as needed
+          
+      - name: Install pnpm
+        run: npm install -g pnpm          
 
       - name: Install Dependencies
         run: pnpm install
 
       - name: Build
         run: pnpm build
-        
+
