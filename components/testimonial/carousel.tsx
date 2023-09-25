@@ -110,19 +110,16 @@ import {
 } from '@react-spring/web'
 
 import styles from './styles.module.css'
+import { IMAGES } from '@/costants'
+import Image from 'next/image'
+import { before } from 'node:test'
 
-const IMAGES = [
-    'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/154443660/original/734570cec0de955789ff0acd80caad3d582b85e0/create-a-generative-art-piece-for-you.png',
-    'https://images.squarespace-cdn.com/content/v1/5c77350965a707ed1710a1bc/1592330659753-70M66LGEPXFTQ8S716MX/Generative+Art+by+Mark+Stock+-+Gyre+35700.jpg',
-    'https://cdn.pixabay.com/photo/2018/09/04/09/12/generative-art-3653275_1280.jpg',
-]
 
 interface CarouselProps {
-  updateActiveIndex: (newState: number) => void;
+  activeIndex: number
 }
 
-export default function Carousel({}) {
-  const [activeIndex, setActiveIndex] = React.useState(0)
+export default function Carousel({activeIndex}:CarouselProps) {
   const springApi = useSpringRef()
 
   const transitions = useTransition(activeIndex, {
@@ -141,34 +138,18 @@ export default function Carousel({}) {
     },
   })
 
-  const handleNext = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === IMAGES.length - 1 ? 0 : prevIndex + 1
-    )
-  }
-
-  const handlePrev = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? IMAGES.length - 1 : prevIndex - 1
-    )
-  }
 
   return (
-    <div className={styles.container}>
+    <div className='w-full h-full'>
       <div className={styles.container__inner}>
+      {/* <div className='before:block before:content-[""] before:w-full before:pt-[100%] hidden relative w-[80vw] ' > */}
+
         {transitions((springs, item) => (
-          <animated.div className={styles.img__container} style={springs}>
-            <img src={IMAGES[item]} alt={`Image ${item + 1}`} />
+          <animated.div className='overflow-hidden absolute w-full top-0' style={springs}>
+            <Image src={IMAGES[item]} alt={`Image ${item + 1}`} className='w-full h-full object-contain' />
           </animated.div>
         ))}
-        <div className={styles.ticker}>
-          {/* ... (existing ticker code) */}
-        </div>
       </div>
-        <div className={styles.navigation}>
-          <button onClick={handlePrev} className='bg-red-600 text-white'>Previous</button>
-          <button onClick={handleNext} className='bg-red-600 text-white'>Next</button>
-        </div>
     </div>
   )
 }

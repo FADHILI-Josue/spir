@@ -6,7 +6,6 @@ interface TestimonialTextProps {
 
 const TestimonialText: React.FC<TestimonialTextProps> = ({ text }) => {
   const [isVisible, setIsVisible] = useState(true);
-
   useEffect(() => {
     // When the text prop changes, initiate animation
     setIsVisible(false);
