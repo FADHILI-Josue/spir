@@ -1,5 +1,7 @@
 // images
 export { default as BannerBg } from './images/homebanner.webp'
+export { default as logoDark } from './images/logo-dark.png'
+export { default as logoWhite } from './images/logo-white.png'
 export { default as goldRing } from './images/gold-ring.webp'
 export { default as blackRing } from './images/black-ring.webp'
 export { default as sliverRing } from './images/silver-ring.webp'

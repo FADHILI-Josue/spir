@@ -9,15 +9,15 @@ export const navbarLinks: INavbarLink[] = [
         href: "/",
     },
     {
-        name: "Oura Experience",
-        href: "/oura-experience",
+        name: "Spir Experience",
+        href: "/Spir-experience",
     },
     {
         name: "The Pulse Blog",
         href: "/blog",
     },
     {
-        name: "Oura for Business",
+        name: "Spir for Business",
         href: "/bussiness",
     }
 
@@ -26,7 +26,7 @@ export const navbarLinks: INavbarLink[] = [
 export const balance_seekers:IbalanceSeeker[] = [
     {
         image: washingtonLogo,
-        desc: '"I’ve gotten some of the most immediately useful sleep insight from the latest Oura ring, which crams a bunch of sensors into a classy ring design"'
+        desc: '"I’ve gotten some of the most immediately useful sleep insight from the latest Spir ring, which crams a bunch of sensors into a classy ring design"'
     },
     {
         image: usaTodayLogo,
@@ -44,7 +44,7 @@ export const devotions:DevotionItem[] = [
     {
         image: manWalking,
         title: 'Our mission',
-        desc: 'Oura was founded in Oulu, Finland with a singular focus: to improve the way we live our lives. We want everyone to realize health as a daily practice — and as a foundation for a balanced life.'
+        desc: 'Spir was founded in Oulu, Finland with a singular focus: to improve the way we live our lives. We want everyone to realize health as a daily practice — and as a foundation for a balanced life.'
     },
     {
         image: fingersOnWater,
@@ -54,7 +54,7 @@ export const devotions:DevotionItem[] = [
     {
         image: manCalling,
         title: 'Our commitment',
-        desc: 'Oura takes data privacy seriously. We only use your data to power your experience and deliver your personal insights. We do not sell your data to third parties or use your data to sell advertising to other companies.'
+        desc: 'Spir takes data privacy seriously. We only use your data to power your experience and deliver your personal insights. We do not sell your data to third parties or use your data to sell advertising to other companies.'
     }
 ]
 
@@ -92,7 +92,7 @@ export const footerData:footerItem[] = [
         title: 'Solutions',
         members: [
             {
-                title: 'Oura for Business',
+                title: 'Spir for Business',
                 link: '#'
             },
             {
@@ -121,7 +121,7 @@ export const footerData:footerItem[] = [
                 link: '#'
             },
             {
-                title: 'Oura on the Web',
+                title: 'Spir on the Web',
                 link: '#'
             },
             {

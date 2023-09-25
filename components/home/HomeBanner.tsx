@@ -8,7 +8,7 @@ interface HomeBannerProps {
 }
 
 const HomeBanner: FC<HomeBannerProps> = ({ }) => {
-    return <div className='w-full h-[80vh] fixed z-0 border flex items-center border-black'>
+    return <div className='w-full h-[95vh] fixed z-0 border flex items-center border-black'>
         <Image src={BannerBg} alt={'ouraring fixed home banner image'} className='absolute top-0 object-cover -z-10' />
         <div className='mx-[10%]'>
             <div className="flex flex-col space-y-4">

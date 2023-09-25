@@ -55,7 +55,7 @@ const Readiness: FC<ReadinessSectionProps> = ({ }) => {
                 animate={{ opacity: 1, scale: 1 }}
 
                 transition={{ duration: 1 }}
-                src={readinessphone} alt='oura phone image' />
+                src={readinessphone} alt='Spir phone image' />
 
             {/* <Image src={image}  alt='oura home phone image' className='h-full w-full object-contain fade-in-out transition-opacity duration-500' /> */}
         </div>
@@ -67,12 +67,12 @@ const Readiness: FC<ReadinessSectionProps> = ({ }) => {
                 </div>
                 <h1 className={cn('leading-tight text-3xl text-stone-700')}>Know why you feel how you feel.</h1>
                 <h1 className={cn('text-stone-700')} ref={topRef}>
-                    The Readiness Score provides a holistic picture of your health using over 20 biometric signals. Oura senses if you’re feeling refreshed or stressed, and tells you if today is a day to push yourself or take it easy. With our research-grade temperature sensors, it can even tell you when you might be getting sick — sometimes even before you know it.            </h1>
+                    The Readiness Score provides a holistic picture of your health using over 20 biometric signals. Spir senses if you’re feeling refreshed or stressed, and tells you if today is a day to push yourself or take it easy. With our research-grade temperature sensors, it can even tell you when you might be getting sick — sometimes even before you know it.            </h1>
                 <Button variant={'outline'} size={'lg'} className={cn('rounded-full w-fit my-4', 'text-stone-700 border-slate-600 hover:bg-slate-900 hover:text-white')}>More About Readiness</Button>
                 <div className='w-full'>
                     <div className="flex flex-col space-y-3 flex-[1]">
                         <h1 className={cn('text-4xl', 'text-[#101926]')}>88%</h1>
-                        <p className={cn('text-md max-w-[7.3rem]', 'text-[#101926]')}>of Oura Members saw an improvement in their overall health.</p>
+                        <p className={cn('text-md max-w-[7.3rem]', 'text-[#101926]')}>of Spir Members saw an improvement in their overall health.</p>
                     </div>
                 </div>
                 {/* ref={topRef} to the last element */}

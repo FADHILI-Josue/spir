@@ -57,7 +57,7 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
             </div>
             <h1 className={cn('leading-tight text-3xl', color === '#D0ECF5' ? 'text-stone-900' : 'text-white')}>Bring your fitness into focus.</h1>
             <h1 className={cn('', color === '#D0ECF5' ? 'text-stone-700' : 'text-white')}>
-                Whether you’re running a marathon or running an errand, Oura tracks your movement, steps, heart rate, and recovery. Discover your ideal balance between activity and recovery to reach your personal fitness goals.
+                Whether you’re running a marathon or running an errand, Spir tracks your movement, steps, heart rate, and recovery. Discover your ideal balance between activity and recovery to reach your personal fitness goals.
             </h1>
             <Button variant={'outline'} size={'lg'} ref={topRef} className={cn('rounded-full w-fit my-4', 'text-[#101926] border-slate-600 hover:bg-[#101926] hover:text-white')}>More About Activity</Button>
             {/* ref={topRef} to the last element */}

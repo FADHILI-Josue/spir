@@ -59,7 +59,7 @@ const Sleeptight: FC<BestForBodySectionProps> = ({ }) => {
             <div className='w-full flex gap-4 justify-between'>
                 {
                     ([
-                        {desc: 'of Oura Members saw an improvement in their sleep quality', rate:86},
+                        {desc: 'of Spir Members saw an improvement in their sleep quality', rate:86},
                         {desc: 'HRV Accuracy', rate:98}
                     ] as const).map((e, i)=> <div key={i} className="flex flex-col space-y-3 flex-[1]">
                     <h1 className={cn('text-4xl',color === '#101926'? 'text-white': 'text-[#101926]')}>{e.rate}%</h1>
