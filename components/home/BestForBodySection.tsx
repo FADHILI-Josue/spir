@@ -1,7 +1,9 @@
 'use client'
 import { homePhone, sleepPhone } from '@/assets';
 import { Button } from '@/components/ui/button'
+import { useActiveSectionContext } from '@/context/active-section-context';
 import { useConfig } from '@/context/configProvider';
+import { useSectionInView } from '@/hooks/ActiveSection';
 import { cn } from '@/lib/utils';
 import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer';
@@ -22,22 +24,8 @@ const BestForBodySection: FC<BestForBodySectionProps> = ({ }) => {
 
 
     // const refa = useRef<HTMLDivElement>(null)
-
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //       const rect = refa?.current?.getBoundingClientRect();
-    //       console.log(rect);
-    //     //   setIsSticky(rect?.top = rect?.current?.offsetHeight);
-    //     };
-
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => {
-    //       window.removeEventListener('scroll', handleScroll);
-    //     };
-    //   }, []);
-
-
     const [reachTop, setreachTop] = useState(false);
+    const { ref } = useSectionInView("bestForBody");
 
 
     const topRef = useRef<HTMLDivElement | null>(null);
@@ -68,7 +56,7 @@ const BestForBodySection: FC<BestForBodySectionProps> = ({ }) => {
         }
     }, [reachTop])
 
-    return <div className={cn('w-full z-0 flex justify-between px-20 pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }}>
+    return <div className={cn('w-full z-0 flex justify-between px-20 pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
         <h1 className={cn('ml-10 leading-tight mt-24 max-w-[26%] text-5xl', color !== '#E6DED3' && 'text-white')} ref={topRef}>
             Do what's best for your body with <em className='font-sans'>three daily scores.</em>
         </h1>

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { BannerBg } from '@/assets/index'
-import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import Bannerbg from '../banner/Banner-bg'
 
 interface HomeBannerProps {
 
@@ -9,7 +9,7 @@ interface HomeBannerProps {
 
 const HomeBanner: FC<HomeBannerProps> = ({ }) => {
     return <div className='w-full h-[95vh] fixed z-0 border flex items-center border-black'>
-        <Image src={BannerBg} alt={'ouraring fixed home banner image'} className='absolute top-0 object-cover -z-10' />
+        <Bannerbg />
         <div className='mx-[10%]'>
             <div className="flex flex-col space-y-4">
                 <span className="font-serif text-5xl max-w-md">The most <em className="font-sans">trusted</em> smart ring.</span>

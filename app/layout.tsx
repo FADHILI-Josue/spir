@@ -1,6 +1,7 @@
 import { instrumental_serf } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
+import Providers from '@/lib/providers'
 import type { Metadata } from 'next'
 import { Inter, Instrument_Serif } from 'next/font/google'
 
@@ -19,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+     <Providers>
       <body className={cn(inter.className, instrumental_serf.variable, 'w-full')}>{children}</body>
+     </Providers>
     </html>
   )
 }

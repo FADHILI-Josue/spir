@@ -6,7 +6,7 @@ import Images from '../components/home/Images'
 import Marquee from 'react-fast-marquee'
 import { balance_seekers, devotions } from '@/costants'
 import Image from 'next/image'
-import { Dot, Phone } from 'lucide-react'
+import { Dot } from 'lucide-react'
 
 import PhoneComponent from '@/components/PhoneComponent'
 import BestForBodySection from '../components/home/BestForBodySection'
@@ -25,10 +25,10 @@ import MovingRectangle from '@/components/SideScroll'
 export default function Home() {
   return (
     <main className='w-full relative flex flex-col'>
-        <MovingRectangle size={23} />
+      <MovingRectangle size={23} />
       <MainTemplate isMain>
         <ScrollHeader />
-        <div className='bg-white text-sm z-20 w-full flex justify-center items-center py-3'>
+        <div className='bg-white relative text-sm z-20 w-full flex justify-center items-center py-3'>
           <p className='text-slate-800 font-semibold'> <a href="#" className='underline'>Shop now</a> and use your HSA/FSA funds at check out.</p>
         </div>
         <Navbar />

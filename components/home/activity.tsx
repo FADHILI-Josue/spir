@@ -8,6 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import Sleepicon from '../ui/sleepicon';
 import FireIcon from '../ui/FireIcon';
 import { useConfig } from '@/context/configProvider';
+import { useSectionInView } from '@/hooks/ActiveSection';
 
 
 interface ActivitySectionProps {
@@ -45,8 +46,10 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
         setColor('#D0ECF5')
         return false
     }, [reachTop])
+    const { ref } = useSectionInView("fitness");
 
-    return <div className={cn('w-full z-0 flex justify-between pr-20 pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }}>
+
+    return <div className={cn('w-full z-0 flex justify-between pr-20 pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
         <div className='max-w-[50%]'>
             <Image src={fitness} alt='sleeping man' />
         </div>

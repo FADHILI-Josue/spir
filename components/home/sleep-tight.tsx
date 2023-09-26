@@ -7,6 +7,7 @@ import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer';
 import Sleepicon from '../ui/sleepicon';
 import { useConfig } from '@/context/configProvider';
+import { useSectionInView } from '@/hooks/ActiveSection';
 
 
 interface BestForBodySectionProps {
@@ -45,7 +46,9 @@ const Sleeptight: FC<BestForBodySectionProps> = ({ }) => {
         return false
     }, [reachTop])
 
-    return <div className={cn('w-full z-0 flex justify-between pl-20 pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }}>
+    const { ref } = useSectionInView("sleepTight", 0.5);
+
+    return <div className={cn('w-full z-0 flex justify-between pl-20 pb-44 items-center')} ref={ref} style={{ backgroundColor: color, transition: 'all 1s' }}>
         <div className='ml-10 max-w-[27%] flex flex-col gap-4'>
             <div className="flex items-center gap-3">
                 <Sleepicon color={color === '#E6DED3' ? 'black' : '#D0ECF5'} />

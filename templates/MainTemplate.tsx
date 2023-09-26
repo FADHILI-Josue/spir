@@ -1,6 +1,8 @@
 'use client'
 import Navbar from '@/components/Navbar'
-import { ConfigProvider } from '@/context/configProvider'
+import ActiveSectionContextProvider from '@/context/active-section-context'
+import { ConfigProvider, useConfig } from '@/context/configProvider'
+import { cn } from '@/lib/utils'
 import { usePathname, useRouter } from 'next/navigation'
 import { FC, ReactNode, useEffect, useState } from 'react'
 
@@ -18,12 +20,11 @@ const MainTemplate: FC<MainTemplateProps> = ({ children, isMain = false }) => {
     const path = pathname.split("/")[1];
     setActive(path);
   }, [router]);
+  const {isOpen} = useConfig()
 
-  return <div className='w-full  flex flex-col items-center'>
-    {!isMain && <Navbar />}
-    <ConfigProvider>
-      {children}
-    </ConfigProvider>
+  return <div className={cn('w-full flex flex-col items-center')}>
+    {!isMain && <Navbar />} 
+    {children}
   </div>
 }
 

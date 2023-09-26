@@ -23,3 +23,5 @@ export interface footerItem {
         title: string
     }[]
 }
+
+type SectionName = "bestForBody" | "sleepTight" | "fitness" | "readiness"

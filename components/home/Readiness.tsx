@@ -9,6 +9,7 @@ import Sleepicon from '../ui/sleepicon';
 import LeavesIcon from '../ui/leavesIcon';
 import { useConfig } from '@/context/configProvider';
 import { ImageComp } from '../ImageComp';
+import { useSectionInView } from '@/hooks/ActiveSection';
 
 
 interface ReadinessSectionProps {
@@ -49,7 +50,9 @@ const Readiness: FC<ReadinessSectionProps> = ({ }) => {
         return false
     }, [reachTop])
 
-    return <div className='relative flex flex-col z-0 items-center w-full'>
+    const { ref } = useSectionInView("readiness",0.5);
+
+    return <div className='relative flex flex-col z-0 items-center w-full' ref={ref}>
         <div className={cn("border absolute w-[25%] z-30 border-black p-5 bg-black top-[12%] flex items-center justify-center rounded-[3rem] h-screen")} style={{ boxShadow: '5px 5px 5px black' }}>
             <ImageComp initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
