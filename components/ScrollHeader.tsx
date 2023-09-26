@@ -38,7 +38,7 @@ const ScrollComponent: React.FC = () => {
 
   return (
     <div
-      className={`fixed top-0 right-0 h-20 flex items-center px-20 justify-between backdrop-blur-sm bg-white/75 w-full z-30 p-4 transition-transform ${isVisible ? 'translate-y-0' : '-translate-y-full'
+      className={`fixed right-0 top-0 z-30 flex h-20 w-full items-center justify-between bg-white/75 p-4 px-20 backdrop-blur-sm transition-transform ${isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
     >
       <Logo />

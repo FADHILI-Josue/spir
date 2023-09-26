@@ -9,6 +9,8 @@ import Sleepicon from '../ui/sleepicon';
 import FireIcon from '../ui/FireIcon';
 import { useConfig } from '@/context/configProvider';
 import { useSectionInView } from '@/hooks/ActiveSection';
+import useIsLargeScreen from '@/hooks/isLargeScreen';
+import PhoneForMobile from '../PhoneForMobile';
 
 
 interface ActivitySectionProps {
@@ -47,24 +49,28 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
         return false
     }, [reachTop])
     const { ref } = useSectionInView("fitness");
+    const isLargeScreen = useIsLargeScreen()
 
-
-    return <div className={cn('w-full z-0 flex justify-between pr-20 pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
-        <div className='max-w-[50%]'>
+    return <div className={cn('w-full z-0 flex flex-col lg:flex-row lg:lustify-between lg:pr-20 pb-44 lg:items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
+        <div className='lg:max-w-[50%] flex flex-col items-center'>
             <Image src={fitness} alt='sleeping man' />
+            {!isLargeScreen && <div className='h-[80vh] w-60 -translate-y-[21%]'>
+                <PhoneForMobile image={runningPhone} />
+            </div>}
         </div>
-        <div className='ml-10 max-w-[25%] flex flex-col gap-4'>
+        <div className='lg:ml-10 flex mx-28 lg:max-w-[25%] flex-col gap-4'>
             <div className="flex items-center gap-3">
                 <FireIcon color={color === '#D0ECF5' ? '#101926' : '#D0ECF5'} />
                 <span className={cn(color === '#D0ECF5' ? 'text-stone-700' : 'text-[#D0ECF5]')}>Activity</span>
             </div>
-            <h1 className={cn('leading-tight text-3xl', color === '#D0ECF5' ? 'text-stone-900' : 'text-white')}>Bring your fitness into focus.</h1>
+            <h1 className={cn('leading-tight text-3xl font-extralight', color === '#D0ECF5' ? 'text-slate-900' : 'text-white')}>Bring your fitness into focus.</h1>
             <h1 className={cn('', color === '#D0ECF5' ? 'text-stone-700' : 'text-white')}>
                 Whether you’re running a marathon or running an errand, Spir tracks your movement, steps, heart rate, and recovery. Discover your ideal balance between activity and recovery to reach your personal fitness goals.
             </h1>
             <Button variant={'outline'} size={'lg'} ref={topRef} className={cn('rounded-full w-fit my-4', 'text-[#101926] border-slate-600 hover:bg-[#101926] hover:text-white')}>More About Activity</Button>
             {/* ref={topRef} to the last element */}
         </div>
+        <div></div>
     </div>
 }
 

@@ -52,22 +52,22 @@ const FloatingLabelInput = () => {
 
 
   return (
-    <div className="relative mt-4 px-3 flex items-center overflowx-hidden">
+    <div className="relative mt-4 flex items-center overflow-x-hidden px-3">
       <input
       id='email'
         type="text"
         value={inputValue}
         onChange={handleInputChange}
-        className="w-[70%] peer py-2 pr-8 bg-transparent border-b hover:border-b-2 focus:border-b-2 hover:border-b-black border-gray-500 outline-none focus:border-main transition-all duration-100"
+        className="peer w-[70%] border-b border-gray-500 bg-transparent py-2 pr-8 outline-none transition-all duration-100 hover:border-b-2 hover:border-b-black focus:border-b-2 focus:border-main"
       />
       <label htmlFor='email'
-        className={`absolute top-0 left-0 px-3 transition-all ${
+        className={`absolute left-0 top-0 px-3 transition-all ${
           inputValue ? 'text-xs text-slate-800' : 'text-sm text-gray-600'
         } ${inputValue ? '-translate-y-2' : 'translate-y-2'}`}
       >
         Placeholder
       </label>
-      <ArrowRight className='-translate-x-7 peer-focus:text-red-500 text-stone-400 '/>
+      <ArrowRight className='-translate-x-7 text-stone-400 peer-focus:text-red-500 '/>
     </div>
   );
 };

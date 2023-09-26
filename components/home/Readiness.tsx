@@ -52,7 +52,7 @@ const Readiness: FC<ReadinessSectionProps> = ({ }) => {
 
     const { ref } = useSectionInView("readiness",0.5);
 
-    return <div className='relative flex flex-col z-0 items-center w-full' ref={ref}>
+    return <div className='relative z-0 flex w-full flex-col items-center' ref={ref}>
         <div className={cn("border absolute w-[25%] z-30 border-black p-5 bg-black top-[12%] flex items-center justify-center rounded-[3rem] h-screen")} style={{ boxShadow: '5px 5px 5px black' }}>
             <ImageComp initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -63,7 +63,7 @@ const Readiness: FC<ReadinessSectionProps> = ({ }) => {
             {/* <Image src={image}  alt='oura home phone image' className='h-full w-full object-contain fade-in-out transition-opacity duration-500' /> */}
         </div>
         <div className={cn('w-full z-0 flex justify-between pl-20 pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }}>
-            <div className='ml-10 max-w-[27%] flex flex-col gap-4'>
+            <div className='ml-10 flex max-w-[27%] flex-col gap-4'>
                 <div className="flex items-center gap-3">
                     <LeavesIcon color={'#101926'} />
                     <span className={cn('text-stone-700')}>sleep</span>
@@ -73,7 +73,7 @@ const Readiness: FC<ReadinessSectionProps> = ({ }) => {
                     The Readiness Score provides a holistic picture of your health using over 20 biometric signals. Spir senses if you’re feeling refreshed or stressed, and tells you if today is a day to push yourself or take it easy. With our research-grade temperature sensors, it can even tell you when you might be getting sick — sometimes even before you know it.            </h1>
                 <Button variant={'outline'} size={'lg'} className={cn('rounded-full w-fit my-4', 'text-stone-700 border-slate-600 hover:bg-slate-900 hover:text-white')}>More About Readiness</Button>
                 <div className='w-full'>
-                    <div className="flex flex-col space-y-3 flex-[1]">
+                    <div className="flex flex-[1] flex-col space-y-3">
                         <h1 className={cn('text-4xl', 'text-[#101926]')}>88%</h1>
                         <p className={cn('text-md max-w-[7.3rem]', 'text-[#101926]')}>of Spir Members saw an improvement in their overall health.</p>
                     </div>

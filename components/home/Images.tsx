@@ -87,15 +87,15 @@ const Images: FC = () => {
         setTouchPosition(null)
     }
 
-    return <section className='w-full'>
-        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} className="group relative sm:self-center sm:col-span-2 lg:col-span-1 mx-auto">
-            <div className="relative inline-flex overflow-hidden h-[80vh] supsmall:h-52 supsmall:w-52">
+    return <section className='w-[96%]'>
+        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} className="group relative mx-auto sm:col-span-2 sm:self-center lg:col-span-1">
+            <div className="supsmall:h-52 supsmall:w-52 relative inline-flex h-[80vh] overflow-hidden">
                 {landingImages?.map((e, i) =>
-                    <Image key={i} src={e.src} alt='rings images' className='hover:scale-110 bg-transparent object-cover  grow shrink-0 transition-all duration-500 h-full w-full' style={{ transform: `translateX(-${currentIndex * 100}%)` }}  />
+                    <Image key={i} src={e.src} alt='rings images' className='h-full w-full shrink-0  grow bg-transparent object-cover transition-all duration-500 hover:scale-110' style={{ transform: `translateX(-${currentIndex * 100}%)` }}  />
                 )
                 }
             </div>
-            <div className='absolute flex bottom-16 left-32 bg-white rounded-full gap-2 py-2 px-4'>
+            <div className='absolute bottom-16 left-32 flex gap-2 rounded-full bg-white px-4 py-2'>
                 {landingImages?.map((e,i)=><div key={i} className='flex items-center gap-2' onClick={()=>setCurrentIndex(i)}>
                      <Image src={e.color} alt={e.name + 'icon gradient'} className='h-7 w-7'/>
                      <span className='text-sm'>{currentIndex == i && e.name}</span>

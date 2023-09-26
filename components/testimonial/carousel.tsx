@@ -140,13 +140,13 @@ export default function Carousel({activeIndex}:CarouselProps) {
 
 
   return (
-    <div className='w-full h-full'>
+    <div className='h-full w-full'>
       <div className={styles.container__inner}>
       {/* <div className='before:block before:content-[""] before:w-full before:pt-[100%] hidden relative w-[80vw] ' > */}
 
         {transitions((springs, item) => (
-          <animated.div className='overflow-hidden absolute w-full top-0' style={springs}>
-            <Image src={IMAGES[item]} alt={`Image ${item + 1}`} className='w-full h-full object-contain' />
+          <animated.div className='absolute top-0 w-full overflow-hidden' style={springs}>
+            <Image src={IMAGES[item]} alt={`Image ${item + 1}`} className='h-full w-full object-contain' />
           </animated.div>
         ))}
       </div>

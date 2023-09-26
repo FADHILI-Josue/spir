@@ -19,8 +19,8 @@ const PhoneComponent: FC<PhoneComponentProps> = ({ }) => {
     const largeScreen = useIsLargeScreen();
     return (<>
         {largeScreen && phoneOpen ?
-            <div className='w-full flex flex-col top-0 z-10 items-center h-fit bg-white sticky'>
-                <div ref={stickyRef} className={cn("border absolute w-[25%] border-black p-5 bg-black top-0 flex items-center justify-center rounded-[3rem] h-screen")} style={{ boxShadow: '5px 5px 5px black' }}>
+            <div className='sticky top-0 z-10 flex h-fit w-full flex-col items-center bg-white'>
+                <div ref={stickyRef} className={cn("border absolute w-[25%] border-black p-5 bg-black top-0 flex items-center justify-center rounded-[3rem] h-screen")} style={{ boxShadow: '10px 5px 10px rgb(0 0 0 / 0.3)' }}>
                     <ImageComp initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                 

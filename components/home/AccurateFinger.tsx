@@ -26,20 +26,20 @@ const AccurateFinger: FC<AccurateFingerProps> = ({ }) => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    return <div className='w-full flex flex-col relative items-center pb-[35vh] bg-[#E6DED3]'>
+    return <div className='relative flex w-full flex-col items-center bg-[#E6DED3] pb-[35vh]'>
         <div className="max-w-full space-y-3 ">
-            <h2 className='text-8xl -translate-x-32 text-slate-950 font-light -tracking-widest' ref={topRef}>More <em className='font-sans tracking-normal'>accurate</em></h2>
-            <h2 className='text-7xl text-slate-950 pl-[25%] font-light whitespace-nowrap tracking-tighter'>from the finger.</h2>
-            <p className='text-lg font-medium max-w-xl text-stone-700 pl-[35%] py-6'>The spir Ring is designed for accuracy above all because it measures from the palm side of your finger, where the pulse signal is strong to read from —much stronger than the wrist (Doctors measure your heart rate from your finger for a reason).</p>
+            <h2 className='-translate-x-32 text-8xl font-light -tracking-widest text-slate-950' ref={topRef}>More <em className='font-sans tracking-normal'>accurate</em></h2>
+            <h2 className='whitespace-nowrap pl-[25%] text-7xl font-light tracking-tighter text-slate-950'>from the finger.</h2>
+            <p className='max-w-xl py-6 pl-[35%] text-lg font-medium text-stone-700'>The spir Ring is designed for accuracy above all because it measures from the palm side of your finger, where the pulse signal is strong to read from —much stronger than the wrist (Doctors measure your heart rate from your finger for a reason).</p>
         </div>
-        <motion.div className='absolute -top-32 right-12 sup-large:right-28 h-52 w-2/7' animate={{ x: scroll, y: 0, scale: 1, rotate: 0, }}>
-            <Image src={manWithOura} className='w-full h-full' alt='man with phone openning spir app' />
+        <motion.div className='w-2/7 absolute -top-32 right-12 h-52 sup-large:right-28' animate={{ x: scroll, y: 0, scale: 1, rotate: 0, }}>
+            <Image src={manWithOura} className='h-full w-full' alt='man with phone openning spir app' />
         </motion.div>
-        <motion.div className='absolute top-40 left-0 h-52 w-2/7' animate={{ x: scroll, y: 0, scale: 1, rotate: 0, }}>
-            <Image src={girlSleeping} className='w-full h-full' alt='man with phone openning spir app' />
+        <motion.div className='w-2/7 absolute left-0 top-40 h-52' animate={{ x: scroll, y: 0, scale: 1, rotate: 0, }}>
+            <Image src={girlSleeping} className='h-full w-full' alt='man with phone openning spir app' />
         </motion.div>
-        <motion.div className='absolute bottom-36 -right-36 sup-large:-right-16 h-52 w-2/7' animate={{ x:scroll, y: 0, scale: 1, rotate: 0, }}>
-            <Image src={girlWithTowel} className='w-full h-full' alt='man with phone openning spir app' />
+        <motion.div className='w-2/7 absolute -right-36 bottom-36 h-52 sup-large:-right-16' animate={{ x:scroll, y: 0, scale: 1, rotate: 0, }}>
+            <Image src={girlWithTowel} className='h-full w-full' alt='man with phone openning spir app' />
         </motion.div>
     </div>
 }

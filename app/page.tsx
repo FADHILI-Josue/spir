@@ -24,28 +24,28 @@ import MovingRectangle from '@/components/SideScroll'
 
 export default function Home() {
   return (
-    <main className='w-full relative flex flex-col'>
+    <main className='relative flex w-full flex-col'>
       <MovingRectangle size={23} />
       <MainTemplate isMain>
         <ScrollHeader />
-        <div className='bg-white relative text-sm z-20 w-full flex justify-center items-center py-3'>
-          <p className='text-slate-800 font-semibold'> <a href="#" className='underline'>Shop now</a> and use your HSA/FSA funds at check out.</p>
+        <div className='relative z-20 flex w-full items-center justify-center bg-white py-3 text-sm'>
+          <p className='font-semibold text-slate-800'> <a href="#" className='underline'>Shop now</a> and use your HSA/FSA funds at check out.</p>
         </div>
         <Navbar />
         <HomeBanner />
-        <div className="flex flex-col mt-[70vh] items-center w-full rounded-t-[3rem] bg-stone-200 z-0" >
-          <div className='w-full flex justify-around mt-20 mb-10'>
-            <span className='text-slate-900 text-5xl max-w-md leading-tight'>Your health. Your style. Your way.</span>
-            <div className="flex flex-col justify-between">
-              <p className='text-gray-900 max-w-md'>Sleek, comfortable, accurate. spir fits seamlessly into your life, all night and all day.</p>
-              <Button className='w-fit py-2 rounded-full px-4' variant={'outline'} size={'lg'}>Shop Now</Button>
+        <div className="items z-0 mt-[70vh] flex w-full flex-col rounded-t-[2rem] bg-[#E6DED3]" >
+          <div className='mb-10 mt-20 px-[20%] gap-5 lg:gap-0 lg:px-10 flex-col lg:flex-row flex w-full lg:items-start justify-around'>
+            <h1 className='lg:max-w-md text-4xl lg:text-5xl font-light leading-tight text-slate-900'>Your health. Your style. Your way.</h1>
+            <div className="flex flex-col gap-5 justify-between">
+              <p className='lg:max-w-sm text-lg text-gray-900'>Sleek, comfortable, accurate. spir fits seamlessly into your life, all night and all day.</p>
+              <Button className='w-fit rounded-full px-4 py-2' variant={'outline'} size={'lg'}>Shop Now</Button>
             </div>
           </div>
           {/* IMAGES */}
-          <div className='w-full sticky -z-10 top-0'>
+          <div className='sticky top-0 -z-10 flex w-full flex-col items-center'>
             <Images />
           </div>
-          <Marquee speed={100} className='w-full bg-white pt-10 pb-14 gap-2'>
+          <Marquee speed={100} className='w-full gap-2 bg-white pb-14 pt-10'>
             {balance_seekers.map((e, i) => <div key={i} className='flex items-center gap-2'>
               <Dot className='h-10 w-10 text-slate-900' />
               <Image key={i} src={e.image} alt='balance seeker' className='h-10' />
@@ -58,30 +58,30 @@ export default function Home() {
           <Activity />
           <Readiness />
           <AccurateFinger />
-          <div className='w-full flex flex-col items-center bg-[#E6DED3] space-y-6 pb-16'>
+          <div className='flex w-full flex-col items-center space-y-6 bg-[#E6DED3] pb-16'>
             <h1 className='text-5xl font-light'>Trusted by experts.</h1>
-            <p className='max-w-2xl text-stone-900 text-xl text-center'>Spir partners with experts across the field to conduct research and advise in development of features.</p>
-            <Button variant={'outline'} size={'lg'} className={'rounded-full px-8 py-[1.7rem] text-md'}>Shop Now</Button>
+            <p className='max-w-2xl text-center text-xl text-stone-900'>Spir partners with experts across the field to conduct research and advise in development of features.</p>
+            <Button variant={'outline'} size={'lg'} className={' rounded-full px-8 py-[1.7rem]'}>Shop Now</Button>
           </div>
           <div className='w-full bg-[#E6DED3]'>
             <Testimonial />
           </div>
-          <div className='w-full bg-[#E6DED3] flex flex-col items-center space-y-8 pb-20'>
-            <h1 className='text-6xl tracking-normal text-center leading-none max-w-4xl font-extralight'>We exist to <em className='font-sans'>empower</em> everyone to realize health as a daily practice.</h1>
-            <Button variant={'outline'} size={'lg'} className='rounded-full p-6 border-stone-400 text-stone-700'>Learn More About Spir</Button>
+          <div className='flex w-full flex-col items-center space-y-8 bg-[#E6DED3] pb-20'>
+            <h1 className='max-w-4xl text-center text-6xl font-extralight leading-none tracking-normal'>We exist to <em className='font-sans'>empower</em> everyone to realize health as a daily practice.</h1>
+            <Button variant={'outline'} size={'lg'} className='rounded-full border-stone-400 p-6 text-stone-700'>Learn More About Spir</Button>
           </div>
-          <div className='w-full flex flex-col items-center bg-[#E6DED3] pb-20  px-36'>
+          <div className='flex w-full flex-col items-center bg-[#E6DED3] px-36  pb-20'>
             <div className="grid w-full grid-cols-3 gap-20">
               {devotions.map((e, i) => <div key={i} className='space-y-5'>
                 <Image src={e.image} alt={e.title} />
-                <h2 className='font-medium text-lg'>{e.title}</h2>
-                <p className='text-md'>{e.desc}</p>
+                <h2 className='text-lg font-medium'>{e.title}</h2>
+                <p className=''>{e.desc}</p>
               </div>)}
             </div>
           </div>
           <OuraJourney />
-          <div className='w-full flex flex-col items-center px-32 bg-[#E6DED3]'>
-            <Link href={'https://ouraring.com/blog/how-accurate-is-oura'} className="w-full text-stone-900 border-y py-5 my-20 border-slate-400">
+          <div className='flex w-full flex-col items-center bg-[#E6DED3] px-32'>
+            <Link href={'https://ouraring.com/blog/how-accurate-is-oura'} className="my-20 w-full border-y border-slate-400 py-5 text-stone-900">
               * <span className='underline'>spir.com/blog/how-accurate-is-spir</span>
             </Link>
 

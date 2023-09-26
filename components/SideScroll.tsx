@@ -1,4 +1,5 @@
 'use client'
+import useIsLargeScreen from '@/hooks/isLargeScreen';
 import React, { useEffect, useMemo, useState } from 'react';
 
 interface MovingRectangleProps {
@@ -20,14 +21,16 @@ const MovingRectangle: React.FC<MovingRectangleProps> = ({ size }) => {
     };
   }, []);
 
+  const isLargeScreen = useIsLargeScreen()
+
   return (
     <> {
-      isVisible ?
-      <div className='fixed flex gap-3 flex-col items-center bottom-32 right-10 z-10'>
+      isVisible && isLargeScreen ?
+      <div className='fixed bottom-32 right-10 z-10 flex flex-col items-center gap-3'>
         <p style={{writingMode: 'vertical-lr'}}>Scroll to discover</p>
-    <div className="border border-stone-600 rounded-full w-5 h-12 flex items-center justify-center bg-[#C1BBB7] ">
-      <div className='w-full h-[80%] my-2 rounded-full flex overflow-hidden items-center justify-center'>
-        <div className="bg-black h-1/4 w-1/4 move rounded-full"></div>
+    <div className="flex h-12 w-5 items-center justify-center rounded-full border border-stone-600 bg-[#C1BBB7] ">
+      <div className='my-2 flex h-[80%] w-full items-center justify-center overflow-hidden rounded-full'>
+        <div className="move h-1/4 w-1/4 rounded-full bg-black"></div>
       </div>
       </div>
     </div> : null

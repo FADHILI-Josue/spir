@@ -7,7 +7,7 @@ interface LogoProps {
 }
 
 const Logo: FC<LogoProps> = ({}) => {
-  return <Image src={logoWhite} alt='logo spir' className='object-contain max-h-10' />
+  return <Image src={logoWhite} alt='logo spir' className='max-h-10 object-contain' />
 }
 
 export default Logo

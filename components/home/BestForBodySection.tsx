@@ -1,12 +1,12 @@
 'use client'
 import { homePhone, sleepPhone } from '@/assets';
 import { Button } from '@/components/ui/button'
-import { useActiveSectionContext } from '@/context/active-section-context';
 import { useConfig } from '@/context/configProvider';
 import { useSectionInView } from '@/hooks/ActiveSection';
+import useIsLargeScreen from '@/hooks/isLargeScreen';
 import { cn } from '@/lib/utils';
 import { FC, useEffect, useMemo, useRef, useState } from 'react'
-import { useInView } from 'react-intersection-observer';
+import PhoneForMobile from '../PhoneForMobile';
 
 
 interface BestForBodySectionProps {
@@ -56,13 +56,18 @@ const BestForBodySection: FC<BestForBodySectionProps> = ({ }) => {
         }
     }, [reachTop])
 
-    return <div className={cn('w-full z-0 flex justify-between px-20 pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
-        <h1 className={cn('ml-10 leading-tight mt-24 max-w-[26%] text-5xl', color !== '#E6DED3' && 'text-white')} ref={topRef}>
+    const isLargeScreen = useIsLargeScreen()
+
+    return <div className={cn('w-full z-0 flex flex-col lg:flex-row justify-between px-32 lg:px-20 pb-20 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
+        <h1 className={cn('lg:ml-10 leading-tight mt-24 lg:max-w-[26%] font-light text-4xl lg:text-5xl', color !== '#E6DED3' && 'text-white')}>
             Do what's best for your body with <em className='font-sans'>three daily scores.</em>
         </h1>
-        <div className='max-w-[30%] mt-[20%]'>
+        <div className='mt-11 lg:mt-[20%] lg:max-w-[30%] lg:text-white'>
             <p className={cn('leading-snug text-stone-800 text-lg mb-8', color !== '#E6DED3' && 'text-white')}>Sleep, Readiness, and Activity. Your scores tell you how your body feels and what your body needs, every second of every day. You'll know when you need more sleep, when you might be getting sick, when it's time to push yourself — and more — with a personalized experience on the Spir App.</p>
             <Button variant={'outline'} size={'lg'} className={cn('rounded-full', color !== '#E6DED3' && 'text-blue-300 border-slate-600')}>Spir Experience</Button>
+        </div>
+        <div ref={!isLargeScreen ? topRef : null} className='h-[80vh] mt-16'>
+        <PhoneForMobile image={homePhone} />
         </div>
     </div>
 }

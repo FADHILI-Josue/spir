@@ -25,7 +25,7 @@ const TopBar: FC<TopBarProps> = ({ isOpen }) => {
 
     return <div className={cn('w-screen h-0 transition-all duration-300 bg-[#E6DED3] fixed z-[49] top-0 left-0 overflow-y-scroll overflow-x-hidden', isOpen && 'h-screen')}>
         {isOpen ?
-            <div className='w-full flex flex-col px-16 pt-36'>
+            <div className='flex w-full flex-col px-16 pt-36'>
                 HTMLDivElemen
             </div>
             : null
