@@ -51,14 +51,15 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
     const { ref } = useSectionInView("fitness");
     const isLargeScreen = useIsLargeScreen()
 
-    return <div className={cn('w-full z-0 flex flex-col lg:flex-row lg:lustify-between lg:pr-20 pb-44 lg:items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
-        <div className='lg:max-w-[50%] flex flex-col items-center'>
+    return <div className={cn('w-full z-0 flex flex-col lg:flex-row  lg:justify-between lg:pr-20 pb-20 lg:pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
+        <div className='lg:max-w-[50%] large:flex flex-col items-center'>
             <Image src={fitness} alt='sleeping man' />
             {!isLargeScreen && <div className='h-[80vh] w-60 -translate-y-[21%]'>
                 <PhoneForMobile image={runningPhone} />
             </div>}
         </div>
-        <div className='lg:ml-10 flex mx-28 lg:max-w-[25%] flex-col gap-4'>
+        <div className='ml-10 lg:max-w-[25%] large:mx-28 flex flex-col gap-4'>
+            {/* <div className='lg:ml-10 flex  lg:max-w-[25%] flex-col gap-4'> */}
             <div className="flex items-center gap-3">
                 <FireIcon color={color === '#D0ECF5' ? '#101926' : '#D0ECF5'} />
                 <span className={cn(color === '#D0ECF5' ? 'text-stone-700' : 'text-[#D0ECF5]')}>Activity</span>
@@ -70,7 +71,6 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
             <Button variant={'outline'} size={'lg'} ref={topRef} className={cn('rounded-full w-fit my-4', 'text-[#101926] border-slate-600 hover:bg-[#101926] hover:text-white')}>More About Activity</Button>
             {/* ref={topRef} to the last element */}
         </div>
-        <div></div>
     </div>
 }
 

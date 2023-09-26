@@ -52,7 +52,7 @@ const Sleeptight: FC<BestForBodySectionProps> = ({ }) => {
     const isLargeScreen = useIsLargeScreen()
 
     return <div className={cn('w-full z-0 flex flex-col lg:flex-row lg:justify-between lg:pl-20 pb-20 lg:pb-44 lg:items-center')} ref={ref} style={{ backgroundColor: color, transition: 'all 1s' }}>
-        <div className='lg:ml-10 px-28 flex lg:max-w-[27%] flex-col large:order-last gap-4'>
+        <div className='lg:ml-10 large:px-28 flex lg:max-w-[27%] flex-col large:order-last gap-4'>
             <div className="flex items-center gap-3">
                 <Sleepicon color={color === '#E6DED3' ? 'black' : '#D0ECF5'} />
                 <span className={cn(color === '#E6DED3' ? 'text-stone-700' : 'text-[#D0ECF5]')}>sleep</span>
@@ -69,7 +69,7 @@ const Sleeptight: FC<BestForBodySectionProps> = ({ }) => {
                         {desc: 'HRV Accuracy', rate:98}
                     ] as const).map((e, i)=> <div key={i} className="flex flex-[1] flex-col space-y-3 large:gap-4">
                     <h1 className={cn('text-4xl',color === '#101926'? 'text-white': 'text-[#101926]')}>{e.rate}%</h1>
-                    <p className={cn('text-md large:max-w-[10rem]',color === '#101926'? 'text-white': 'text-[#101926]')} ref={i==1 && isLargeScreen ? topRef : null}>{e.desc}</p>
+                    <p className={cn('text-md large:max-w-[10rem]',color === '#101926'? 'text-white': 'text-[#101926]')} ref={i==1 ? topRef : null}>{e.desc}</p>
                 </div>)
                 }
             </div>
