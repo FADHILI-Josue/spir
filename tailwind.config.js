@@ -21,7 +21,10 @@ module.exports = {
       ...screens,
       'foo': {'max': '1049px'},
       'large': {'max': '1024px'},
+      'small': {'max': '640px'},
+      'sup-small': {'max': '640px'},
       'sup-large' : '1172px',
+      'spm' : '280px',
     },
     extend: {
       fontFamily: {

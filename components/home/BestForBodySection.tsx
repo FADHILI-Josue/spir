@@ -58,7 +58,7 @@ const BestForBodySection: FC<BestForBodySectionProps> = ({ }) => {
 
     const isLargeScreen = useIsLargeScreen()
 
-    return <div className={cn('w-full z-0 flex flex-col lg:flex-row justify-between large:px-32 lg:px-20 pb-20 lg:pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
+    return <div className={cn('w-full z-0 flex flex-col lg:flex-row justify-between px-10 md:px-32 lg:px-20 pb-20 lg:pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
         <h1 className={cn('lg:ml-10 leading-tight mt-24 lg:max-w-[26%] font-light text-4xl lg:text-5xl', color !== '#E6DED3' && 'text-white')} ref={isLargeScreen? topRef: null}>
             Do what's best for your body with <em className='font-sans'>three daily scores.</em>
         </h1>
@@ -67,7 +67,7 @@ const BestForBodySection: FC<BestForBodySectionProps> = ({ }) => {
             <Button variant={'outline'} size={'lg'} className={cn('rounded-full text-black', color !== '#E6DED3' && 'text-blue-300 border-slate-600')}>Spir Experience</Button>
         </div>
         {!isLargeScreen && 
-        <div ref={!isLargeScreen ? topRef : null} className='mt-16 h-[80vh]'>
+        <div ref={!isLargeScreen ? topRef : null} className='mt-16 h-[60vh] md:h-[80vh]'>
         <PhoneForMobile image={homePhone} />
         </div>}
     </div>

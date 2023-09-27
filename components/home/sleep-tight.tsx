@@ -52,7 +52,7 @@ const Sleeptight: FC<BestForBodySectionProps> = ({ }) => {
     const isLargeScreen = useIsLargeScreen()
 
     return <div className={cn('w-full z-0 flex flex-col lg:flex-row lg:justify-between lg:pl-20 pb-20 lg:pb-44 lg:items-center')} ref={ref} style={{ backgroundColor: color, transition: 'all 1s' }}>
-        <div className='flex flex-col gap-4 lg:ml-10 lg:max-w-[27%] large:order-last large:px-28'>
+        <div className='flex flex-col gap-4 lg:ml-10 lg:max-w-[27%] large:order-last px-10 md:px-28'>
             <div className="flex items-center gap-3">
                 <Sleepicon color={color === '#E6DED3' ? 'black' : '#D0ECF5'} />
                 <span className={cn(color === '#E6DED3' ? 'text-stone-700' : 'text-[#D0ECF5]')}>sleep</span>
@@ -77,7 +77,7 @@ const Sleeptight: FC<BestForBodySectionProps> = ({ }) => {
         </div>
         <div className='flex flex-col items-center lg:max-w-[50%]'>
                 <Image src={SleepingMan} alt='sleeping man' className='large:w-full'/>
-                {!isLargeScreen && <div className='h-[80vh] w-60 -translate-y-[21%]'>
+                {!isLargeScreen && <div className='h-[60vh] md:h-[80vh] -translate-y-[21%]'>
                     <PhoneForMobile image={sleepPhone} />
                 </div>}
         </div>

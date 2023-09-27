@@ -63,7 +63,7 @@ const Readiness: FC<ReadinessSectionProps> = ({ }) => {
             {/* <Image src={image}  alt='oura home phone image' className='h-full w-full object-contain fade-in-out transition-opacity duration-500' /> */}
         </div>}
         <div className={cn('w-full z-0 flex flex-col lg:flex-row justify-between lg:pl-20 pb-20 lg:pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }}>
-            <div className='flex flex-col gap-4 lg:ml-10 lg:max-w-[27%] large:order-last large:mx-28'>
+            <div className='flex flex-col gap-4 lg:ml-10 lg:max-w-[27%] large:order-last mx-10 md:mx-28'>
                 <div className="flex items-center gap-3">
                     <LeavesIcon color={'#101926'} />
                     <span className={cn('text-stone-700')}>sleep</span>
@@ -82,7 +82,7 @@ const Readiness: FC<ReadinessSectionProps> = ({ }) => {
             </div>
             <div className='flex flex-col items-center lg:max-w-[50%]'>
                 <Image src={readiness} alt='readiness photo' />
-                {!isLargeScreen && <div className='h-[80vh] w-60 -translate-y-[21%]'>
+                {!isLargeScreen && <div className='h-[60vh] md:h-[80vh] -translate-y-[21%]'>
                     <PhoneForMobile image={readinessphone} />
                 </div>}
             </div>

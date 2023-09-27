@@ -15,7 +15,7 @@ const Footer: FC<FooterProps> = ({ }) => {
     return <div className='w-full bg-[#E6DED3]'>
         <div className='mb-20 grid w-full grid-cols-1 px-10 lg:grid-cols-5 lg:px-32'>
             <div className="col-span-2 self-start">
-                <div className='-translate-x-20 lg:-translate-x-10'><Logo /></div>
+                <div className=''><Logo /></div>
                 <h3 className='mb-12 mt-20 max-w-[70%] text-xl text-main'>Receive the latest articles, tips, and offers from Spir</h3>
                 <EmailInput />
                 <p className='my-5 text-sm text-main'>We care about protecting your data. <br />Read more in our <Link href={'https://ouraring.com/privacy-policy'} className='underline'>Privacy policy.</Link></p>

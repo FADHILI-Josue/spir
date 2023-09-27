@@ -54,11 +54,11 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
     return <div className={cn('w-full z-0 flex flex-col lg:flex-row  lg:justify-between lg:pr-20 pb-20 lg:pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
         <div className='flex-col items-center lg:max-w-[50%] large:flex'>
             <Image src={fitness} alt='sleeping man' />
-            {!isLargeScreen && <div className='h-[80vh] w-60 -translate-y-[21%]'>
+            {!isLargeScreen && <div className='h-[60vh] md:h-[80vh] -translate-y-[21%]'>
                 <PhoneForMobile image={runningPhone} />
             </div>}
         </div>
-        <div className='ml-10 flex flex-col gap-4 lg:max-w-[25%] large:mx-28'>
+        <div className='ml-10 flex flex-col gap-4 lg:max-w-[25%] mx-10 md:mx-28'>
             {/* <div className='lg:ml-10 flex  lg:max-w-[25%] flex-col gap-4'> */}
             <div className="flex items-center gap-3">
                 <FireIcon color={color === '#D0ECF5' ? '#101926' : '#D0ECF5'} />

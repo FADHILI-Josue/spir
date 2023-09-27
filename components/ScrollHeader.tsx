@@ -44,7 +44,7 @@ const ScrollComponent: React.FC = () => {
 
   return (
     <div
-      className={`fixed right-0 top-0 z-10 flex h-20 w-full items-center justify-between bg-white/30 p-4 px-20 backdrop-blur-2xl transition-transform ${isVisible ? 'translate-y-0' : '-translate-y-full'
+      className={`fixed right-0 top-0 z-10 flex h-20 w-full items-center justify-between bg-white/30 p-4 px-5 md:-20 backdrop-blur-2xl transition-transform ${isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
     >
       <TopBar isOpen={isOpen} />
@@ -54,7 +54,7 @@ const ScrollComponent: React.FC = () => {
         <Logo />
 
       </div>
-      <Button variant={'outline'} size={'lg'} className='rounded-full'>Shop Now</Button>
+      <Button variant={'outline'} className='rounded-full'>Shop Now</Button>
     </div>
   );
 };

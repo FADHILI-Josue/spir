@@ -95,7 +95,7 @@ const Images: FC = () => {
                 )
                 }
             </div>
-            <div className='absolute bottom-16 left-32 flex gap-2 rounded-full bg-white px-4 py-2'>
+            <div className='absolute bottom-16 left-5 md:left-32 flex gap-2 rounded-full bg-white px-4 py-2'>
                 {landingImages?.map((e,i)=><div key={i} className='flex items-center gap-2' onClick={()=>setCurrentIndex(i)}>
                      <Image src={e.color} alt={e.name + 'icon gradient'} className='h-7 w-7'/>
                      <span className='text-sm'>{currentIndex == i && e.name}</span>

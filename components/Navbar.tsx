@@ -20,9 +20,9 @@ const Navbar: FC<NavbarProps> = () => {
 
   const isLargeScreen = useIsLargeScreen()
   const [isOpen, toggleOpen ] = useCycle(false, true)
-  return <div className={cn('w-full z-40 bg-transparent flex items-center justify-around mt-4', { 'justify-between mr-10': !isLargeScreen })}>
+  return <div className={cn('w-full z-40 bg-transparent flex items-center justify-around mt-4', { 'justify-between small:px-3 large:px-10': !isLargeScreen })}>
     <TopBar isOpen={isOpen} />
-    <div className='flex items-center'>
+    <div className='large:flex items-center'>
       {!isLargeScreen && <MenuIcon isOpen={isOpen} toggleOpen={toggleOpen} />}
       <Logo />
     </div>
