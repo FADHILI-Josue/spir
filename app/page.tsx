@@ -66,12 +66,12 @@ export default function Home() {
           <div className='w-full bg-[#E6DED3]'>
             <Testimonial />
           </div>
-          <div className='flex w-full flex-col items-center space-y-8 bg-[#E6DED3] pb-20'>
-            <h1 className='max-w-4xl text-center text-6xl font-extralight leading-none tracking-normal'>We exist to <em className='font-sans'>empower</em> everyone to realize health as a daily practice.</h1>
+          <div className='flex w-full flex-col items-center space-y-8 bg-[#E6DED3] large:px-20 pb-20'>
+            <h1 className='max-w-4xl text-center text-[2.4rem] lg:text-6xl font-extralight leading-none tracking-normal'>We exist to <em className='font-sans'>empower</em> everyone to realize health as a daily practice.</h1>
             <Button variant={'outline'} size={'lg'} className='rounded-full border-stone-400 p-6 text-stone-700'>Learn More About Spir</Button>
           </div>
-          <div className='flex w-full flex-col items-center bg-[#E6DED3] px-36  pb-20'>
-            <div className="grid w-full grid-cols-3 gap-20">
+          <div className='flex w-full flex-col items-center bg-[#E6DED3] px-24 lg:px-36  pb-20'>
+            <div className="grid w-full grid-cols-1 lg:grid-cols-3 gap-20">
               {devotions.map((e, i) => <div key={i} className='space-y-5'>
                 <Image src={e.image} alt={e.title} />
                 <h2 className='text-lg font-medium'>{e.title}</h2>

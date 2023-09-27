@@ -1,25 +1,26 @@
-import React, { useState, useEffect } from 'react';
+'use client'
+import React, { useState, useEffect, ReactNode } from 'react';
 
 interface TestimonialTextProps {
-  text: string;
+  children: ReactNode;
 }
 
-const TestimonialText: React.FC<TestimonialTextProps> = ({ text }) => {
+const TestimonialText: React.FC<TestimonialTextProps> = ({ children }) => {
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
-    // When the text prop changes, initiate animation
+    // When the children prop changes, initiate animation
     setIsVisible(false);
 
-    // After a delay, set the new text and fade it in
+    // After a delay, set the new children and fade it in
     setTimeout(() => {
       setIsVisible(true);
     }, 1000);
-  }, [text]);
+  }, [children]);
 
   return (
-    <div className={`transition-opacity ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      {text}
-    </div>
+    <p className={`transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      {children}
+    </p>
   );
 };
 

@@ -25,3 +25,10 @@ export interface footerItem {
 }
 
 type SectionName = "bestForBody" | "sleepTight" | "fitness" | "readiness"
+
+export interface Testimonial {
+    Image: StaticImageData,
+    quote: string,
+    author_name: string,
+    author_desc: string
+}

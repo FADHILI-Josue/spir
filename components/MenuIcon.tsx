@@ -53,7 +53,7 @@ const MenuToggle = ({ toggle }:{toggle: any}) => (
       animate={isOpen ? "open" : "closed"}
       custom={300}
       ref={containerRef}
-      className={cn("translate-x-16 w-fit z-50", {'text-red-500':isOpen})}
+      className={cn("flex flex-col items-center w-fit z-50", {'text-red-500':isOpen})}
     >
       <MenuToggle toggle={() => toggleOpen()}/>
     </motion.div>

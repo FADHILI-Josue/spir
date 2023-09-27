@@ -1,4 +1,5 @@
 'use client'
+import useIsLargeScreen from '@/hooks/isLargeScreen'
 import { cn } from '@/lib/utils'
 import { FC, useEffect } from 'react'
 
@@ -12,8 +13,7 @@ const TopBar: FC<TopBarProps> = ({ isOpen }) => {
 
         // Set the desired height
         if (isOpen) {
-            document.documentElement.style.overflow = 'hidden',
-                document.body.style.filter = 'blur(5px) brightness(70%)';
+            document.documentElement.style.overflow = 'hidden';
         }
         else {
             document.documentElement.style.overflowY = 'scroll'; document.documentElement.style.overflowX = 'hidden'
@@ -22,6 +22,7 @@ const TopBar: FC<TopBarProps> = ({ isOpen }) => {
 
 
     }, [isOpen])
+
 
     return <div className={cn('w-screen h-0 transition-all duration-300 bg-[#E6DED3] fixed z-[49] top-0 left-0 overflow-y-scroll overflow-x-hidden', isOpen && 'h-screen')}>
         {isOpen ?

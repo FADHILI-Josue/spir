@@ -5,6 +5,7 @@ import { footerData, footerIcons, loweFooterData } from '@/costants'
 import Image from 'next/image'
 import { accepted } from '@/assets'
 import Logo from '../Logo'
+import FooterList from '../footer/FooterList'
 
 interface FooterProps {
 
@@ -12,19 +13,25 @@ interface FooterProps {
 
 const Footer: FC<FooterProps> = ({ }) => {
     return <div className='w-full bg-[#E6DED3]'>
-        <div className='mb-20 grid w-full grid-cols-5 px-32'>
+        <div className='mb-20 grid w-full grid-cols-1 lg:grid-cols-5 px-10 lg:px-32'>
             <div className="col-span-2 self-start">
-                <div className='-translate-x-10'><Logo /></div>
+                <div className='-translate-x-20 lg:-translate-x-10'><Logo /></div>
                 <h3 className='mb-12 mt-20 max-w-[70%] text-xl text-main'>Receive the latest articles, tips, and offers from Spir</h3>
                 <EmailInput />
                 <p className='my-5 text-sm text-main'>We care about protecting your data. <br />Read more in our <Link href={'https://ouraring.com/privacy-policy'} className='underline'>Privacy policy.</Link></p>
             </div>
-            {footerData.map((e, i) => <div key={i} className="flex flex-col items-start space-y-4">
-                <h3 className='text-neutral-500'>{e.title}</h3>
-                {e.members.map((e, i) => <Link href={e.link} key={i} className='text-[0.9em] text-main'>{e.title}</Link>)}
-            </div>)}
+            <div className='w-full cursor-pointer lg:hidden flex flex-col'>
+
+                {footerData.map((e, i) => <div key={i} className="flex flex-col large:w-full items-start space-y-4">
+                    <FooterList {...e} />
+                </div>)}
+            </div>
+        {footerData.map((e, i) => <div key={i} className="hidden lg:flex flex-col items-start space-y-4">
+            <h3 className='text-neutral-500'>{e.title}</h3>
+            {e.members.map((e, i) => <Link href={e.link} key={i} className='text-[0.9em] text-main'>{e.title}</Link>)}
+        </div>)}
         </div>
-        <div className="ml-32 mr-5 flex items-center justify-between">
+        <div className="lg:ml-32 mx-8 lg:mr-5 flex items-center justify-between">
             <div className="flex items-center gap-5">
 
                 <div className="iconfootercontainer">
@@ -56,13 +63,13 @@ const Footer: FC<FooterProps> = ({ }) => {
                 <Image src={accepted} alt='accepted' />
             </div>
         </div>
-        <div className="my-10 ml-32 mr-5 flex justify-between">
+        <div className="my-10 lg:ml-32 lg:mr-5 large:gap-2 mx-8 flex justify-between">
             <div className="text-sm text-stone-500">
                 <p>© 2023 Ōura Health Oy. All Rights Reserved.</p>
                 <p>ŌURA and Spir and Ō are trademarks of Ōura Health Oy and may not be used without permission.</p>
             </div>
-            <div className="flex gap-3 text-sm text-main">
-                {loweFooterData.map((e,i)=><Link key={i} href={e.link}>{e.title}</Link>)}
+            <div className="flex gap-3 flex-wrap text-sm text-main">
+                {loweFooterData.map((e, i) => <Link key={i} href={e.link}>{e.title}</Link>)}
             </div>
         </div>
     </div>

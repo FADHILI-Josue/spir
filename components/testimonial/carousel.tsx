@@ -110,7 +110,7 @@ import {
 } from '@react-spring/web'
 
 import styles from './styles.module.css'
-import { IMAGES } from '@/costants'
+import { Testimonials } from '@/costants'
 import Image from 'next/image'
 import { before } from 'node:test'
 
@@ -146,7 +146,7 @@ export default function Carousel({activeIndex}:CarouselProps) {
 
         {transitions((springs, item) => (
           <animated.div className='absolute top-0 w-full overflow-hidden' style={springs}>
-            <Image src={IMAGES[item]} alt={`Image ${item + 1}`} className='h-full w-full object-contain' />
+            <Image src={Testimonials[item].Image} alt={`Image ${item + 1}`} className='h-full w-full object-contain' />
           </animated.div>
         ))}
       </div>

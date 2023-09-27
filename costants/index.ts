@@ -1,5 +1,5 @@
 import { architechuralTodayLogo, expertsGotlieb, expertsRobbins, facebook, fingersOnWater, instagram, manCalling, manWalking, mattWalker, pinterest, tiktok, twitter, usaTodayLogo, washingtonLogo, youtube } from "@/assets";
-import { DevotionItem, INavbarLink, IbalanceSeeker, footerItem } from "@/utils/types";
+import { DevotionItem, INavbarLink, IbalanceSeeker, Testimonial, footerItem } from "@/utils/types";
 import { StaticImageData } from "next/image";
 import React from "react";
 
@@ -175,8 +175,23 @@ export const footerIcons:StaticImageData[]= [
     pinterest
 ]
 
-export const IMAGES: StaticImageData[] = [
-    mattWalker,
-    expertsGotlieb,
-    expertsRobbins
+export const Testimonials: Testimonial[] = [
+    {
+        author_name: 'Dr. Matthew Walker, PhD',
+        author_desc: 'Professor of Neuroscience, New York Times Bestseller and author of, “Why We Sleep”, and Scientific Advisor to Oura',
+        Image: mattWalker,
+        quote: 'One cannot understand their health, nor make changes and see how those changes make a difference, unless the measuring tool is of acceptable accuracy, and consistently accurate.'
+    },
+    {
+        author_name: 'Dr. Rebecca Robbins, PhD',
+        author_desc: "Instructor in Medicine at Harvard Medical School, Associate Scientist at Brigham and Women's Hospital, and Advisor to Oura",
+        Image: expertsRobbins,
+        quote: 'Monitoring your sleep can help you stay on track toward other health and lifestyle goals, particularly when you are also fine-tuning your daily routine to optimize sleep. Tracking can give you a sense of how those changes impact your sleep, if other aspects of your day are held constant.'
+    },
+    {
+        author_name: 'Neta Gotlieb, PhD',
+        author_desc: "Lead Clinical Research Scientist at Oura, researching and developing solutions focused on women's health",
+        Image: expertsGotlieb,
+        quote: "Women's and reproductive health have historically been under served by medicine, science, and tech, which has created a significant knowledge gap in this space. As we grow in our understanding of reproductive physiology and its relation to other systems in our body, we open a window to better understanding our overall health so that we can make more informed choices."
+    }
 ]
