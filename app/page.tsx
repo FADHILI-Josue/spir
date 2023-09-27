@@ -34,10 +34,10 @@ export default function Home() {
         <Navbar />
         <HomeBanner />
         <div className="items z-0 mt-[70vh] flex w-full flex-col rounded-t-[2rem] bg-[#E6DED3]" >
-          <div className='mb-10 mt-20 px-[20%] gap-5 lg:gap-0 lg:px-10 flex-col lg:flex-row flex w-full lg:items-start justify-around'>
-            <h1 className='lg:max-w-md text-4xl lg:text-5xl font-light leading-tight text-slate-900'>Your health. Your style. Your way.</h1>
-            <div className="flex flex-col gap-5 justify-between">
-              <p className='lg:max-w-sm text-lg text-gray-900'>Sleek, comfortable, accurate. spir fits seamlessly into your life, all night and all day.</p>
+          <div className='mb-10 mt-20 flex w-full flex-col justify-around gap-5 px-[20%] lg:flex-row lg:items-start lg:gap-0 lg:px-10'>
+            <h1 className='text-4xl font-light leading-tight text-slate-900 lg:max-w-md lg:text-5xl'>Your health. Your style. Your way.</h1>
+            <div className="flex flex-col justify-between gap-5">
+              <p className='text-lg text-gray-900 lg:max-w-sm'>Sleek, comfortable, accurate. spir fits seamlessly into your life, all night and all day.</p>
               <Button className='w-fit rounded-full px-4 py-2' variant={'outline'} size={'lg'}>Shop Now</Button>
             </div>
           </div>
@@ -66,12 +66,12 @@ export default function Home() {
           <div className='w-full bg-[#E6DED3]'>
             <Testimonial />
           </div>
-          <div className='flex w-full flex-col items-center space-y-8 bg-[#E6DED3] large:px-20 pb-20'>
-            <h1 className='max-w-4xl text-center text-[2.4rem] lg:text-6xl font-extralight leading-none tracking-normal'>We exist to <em className='font-sans'>empower</em> everyone to realize health as a daily practice.</h1>
+          <div className='flex w-full flex-col items-center space-y-8 bg-[#E6DED3] pb-20 large:px-20'>
+            <h1 className='max-w-4xl text-center text-[2.4rem] font-extralight leading-none tracking-normal lg:text-6xl'>We exist to <em className='font-sans'>empower</em> everyone to realize health as a daily practice.</h1>
             <Button variant={'outline'} size={'lg'} className='rounded-full border-stone-400 p-6 text-stone-700'>Learn More About Spir</Button>
           </div>
-          <div className='flex w-full flex-col items-center bg-[#E6DED3] px-24 lg:px-36  pb-20'>
-            <div className="grid w-full grid-cols-1 lg:grid-cols-3 gap-20">
+          <div className='flex w-full flex-col items-center bg-[#E6DED3] px-24 pb-20  lg:px-36'>
+            <div className="grid w-full grid-cols-1 gap-20 lg:grid-cols-3">
               {devotions.map((e, i) => <div key={i} className='space-y-5'>
                 <Image src={e.image} alt={e.title} />
                 <h2 className='text-lg font-medium'>{e.title}</h2>

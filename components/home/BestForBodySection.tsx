@@ -67,7 +67,7 @@ const BestForBodySection: FC<BestForBodySectionProps> = ({ }) => {
             <Button variant={'outline'} size={'lg'} className={cn('rounded-full text-black', color !== '#E6DED3' && 'text-blue-300 border-slate-600')}>Spir Experience</Button>
         </div>
         {!isLargeScreen && 
-        <div ref={!isLargeScreen ? topRef : null} className='h-[80vh] mt-16'>
+        <div ref={!isLargeScreen ? topRef : null} className='mt-16 h-[80vh]'>
         <PhoneForMobile image={homePhone} />
         </div>}
     </div>

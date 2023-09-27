@@ -49,7 +49,7 @@ const ScrollComponent: React.FC = () => {
     >
       <TopBar isOpen={isOpen} />
 
-      <div className='large:flex large:-traslate-x-10 items-center justify-start'>
+      <div className='large:-traslate-x-10 items-center justify-start large:flex'>
         {!isLargeScreen && <MenuIcon isOpen={isOpen} toggleOpen={toggleOpen} />}
         <Logo />
 

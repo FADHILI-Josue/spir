@@ -52,13 +52,13 @@ const FloatingLabelInput = () => {
 
 
   return (
-    <div className="relative mt-4 w-full flex items-center overflow-x-hidden px-3">
+    <div className="relative mt-4 flex w-full items-center overflow-x-hidden px-3">
       <input
       id='email'
         type="text"
         value={inputValue}
         onChange={handleInputChange}
-        className="peer w-full sm:w-[50%] md:w-[70%] border-b border-gray-500 bg-transparent py-2 pr-8 outline-none transition-all duration-100 hover:border-b-2 hover:border-b-black focus:border-b-2 focus:border-main"
+        className="peer w-full border-b border-gray-500 bg-transparent py-2 pr-8 outline-none transition-all duration-100 hover:border-b-2 hover:border-b-black focus:border-b-2 focus:border-main sm:w-[50%] md:w-[70%]"
       />
       <label htmlFor='email'
         className={`absolute left-0 top-0 px-3 transition-all ${

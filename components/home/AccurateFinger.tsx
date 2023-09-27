@@ -28,26 +28,26 @@ const AccurateFinger: FC<AccurateFingerProps> = ({ }) => {
         };
     }, []);
     const isLargeScreen = useIsLargeScreen()
-    return <div className='w-full flex flex-col relative items-center pb-20 lg:pb-[35vh] bg-[#E6DED3]'>
-        <div className="max-w-full flex flex-col items-center space-y-3 ">
-            <h2 className='lg:text-8xl text-6xl lg:-translate-x-32 text-slate-950 font-light -tracking-widest' ref={topRef}>More <em className='font-sans tracking-normal'>accurate</em></h2>
-            <h2 className='text-6xl  text-slate-950 lg:pl-[25%] font-light lg:whitespace-nowrap tracking-tighter '>from the finger.</h2>
-           {!isLargeScreen && <div className='flex pt-14 gap-3 items-center flex-nowrwap w-full ' style={{ transform: `translateX(${(scroll * 14) + 50}px)` }}>
+    return <div className='relative flex w-full flex-col items-center bg-[#E6DED3] pb-20 lg:pb-[35vh]'>
+        <div className="flex max-w-full flex-col items-center space-y-3 ">
+            <h2 className='text-6xl font-light -tracking-widest text-slate-950 lg:-translate-x-32 lg:text-8xl' ref={topRef}>More <em className='font-sans tracking-normal'>accurate</em></h2>
+            <h2 className='text-6xl  font-light tracking-tighter text-slate-950 lg:whitespace-nowrap lg:pl-[25%] '>from the finger.</h2>
+           {!isLargeScreen && <div className='flex-nowrwap flex w-full items-center gap-3 pt-14 ' style={{ transform: `translateX(${(scroll * 14) + 50}px)` }}>
                 <Image src={manWithOuraMobile} className='h-[80%] w-full large:object-contain' alt='man with phone openning spir app' />
-                <Image src={girlSleepingMobile} className='h-[80%] w-full large:object-contain -translate-y-10' alt='man with phone openning spir app' />
+                <Image src={girlSleepingMobile} className='h-[80%] w-full -translate-y-10 large:object-contain' alt='man with phone openning spir app' />
                 <Image src={girlWithTowelMobile} className='h-[80%] w-full large:object-contain' alt='man with phone openning spir app' />
             </div>}
-            <p className='text-lg font-medium lg:max-w-xl large:mx-28 text-stone-700 lg:pl-[35%] py-6'>The spir Ring is designed for accuracy above all because it measures from the palm side of your finger, where the pulse signal is strong to read from —much stronger than the wrist (Doctors measure your heart rate from your finger for a reason).</p>
+            <p className='py-6 text-lg font-medium text-stone-700 lg:max-w-xl lg:pl-[35%] large:mx-28'>The spir Ring is designed for accuracy above all because it measures from the palm side of your finger, where the pulse signal is strong to read from —much stronger than the wrist (Doctors measure your heart rate from your finger for a reason).</p>
         </div>
 {isLargeScreen &&        <>
-        <motion.div className='absolute -top-32 right-28 h-52 w-2/7' animate={{ x: scroll, y: 0, scale: 1, rotate: 0, }}>
-            <Image src={manWithOura} className='w-full h-full' alt='man with phone openning spir app' />
+        <motion.div className='w-2/7 absolute -top-32 right-28 h-52' animate={{ x: scroll, y: 0, scale: 1, rotate: 0, }}>
+            <Image src={manWithOura} className='h-full w-full' alt='man with phone openning spir app' />
         </motion.div>
-        <motion.div className='absolute top-40 left-0 h-52 w-2/7' animate={{ x: scroll, y: 0, scale: 1, rotate: 0, }}>
-            <Image src={girlSleeping} className='w-full h-full' alt='man with phone openning spir app' />
+        <motion.div className='w-2/7 absolute left-0 top-40 h-52' animate={{ x: scroll, y: 0, scale: 1, rotate: 0, }}>
+            <Image src={girlSleeping} className='h-full w-full' alt='man with phone openning spir app' />
         </motion.div>
-        <motion.div className='absolute bottom-36 -right-16 h-52 w-2/7' animate={{ x: scroll, y: 0, scale: 1, rotate: 0, }}>
-            <Image src={girlWithTowel} className='w-full h-full' alt='man with phone openning spir app' />
+        <motion.div className='w-2/7 absolute -right-16 bottom-36 h-52' animate={{ x: scroll, y: 0, scale: 1, rotate: 0, }}>
+            <Image src={girlWithTowel} className='h-full w-full' alt='man with phone openning spir app' />
         </motion.div>
         </>}
     </div>

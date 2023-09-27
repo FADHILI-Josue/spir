@@ -45,6 +45,8 @@ export { default as facebook } from './icons/facebook.svg'
 export { default as youtube } from './icons/youtube.svg'
 export { default as tiktok } from './icons/tiktok.svg'
 export { default as pinterest } from './icons/pinterest.svg'
+export { default as arrowDown } from './icons/arrowDown.svg'
+export { default as arrowUp } from './icons/arrowUp.svg'
 
 export { default as accepted } from './icons/accepted.svg'
 
