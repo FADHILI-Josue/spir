@@ -80,7 +80,7 @@ export default function Home() {
             </div>
           </div>
           <OuraJourney />
-          <div className='flex w-full flex-col items-center bg-[#E6DED3] px-32'>
+          <div className='flex w-full flex-col items-center bg-[#E6DED3] px-10 md:px-32'>
             <Link href={'https://ouraring.com/blog/how-accurate-is-oura'} className="my-20 w-full border-y border-slate-400 py-5 text-stone-900">
               * <span className='underline'>spir.com/blog/how-accurate-is-spir</span>
             </Link>
