@@ -34,7 +34,7 @@ const Testimonial: FC<TestimonialProps> = ({ }) => {
     {/* <Carousel /> */}
     {/* <SideImage imageUrl={fitness} altText='hello world'/> */}
     <div className="hidden flex-col lg:flex">
-      <div className="ml-10 flex items-center gap-8"> <ArrowLeft className='rounded-full border border-stone-400 p-2 text-3xl transition-all duration-200 hover:border-stone-800' size={40} onClick={handlePrev} /> <p className='text-sm text-gray-700'>0{activeIndex + 1} - 0{Testimonials.length}</p> <ArrowRight className='rounded-full border border-stone-400 p-2 text-3xl transition-all duration-200 hover:border-stone-800' size={40} onClick={handleNext} /> </div>
+      <div className="ml-10 flex items-center gap-8"> <ArrowLeft className='rounded-full border border-stone-400 p-2 text-3xl transition-all duration-200 hover:border-stone-800' size={40} onClick={handlePrev} /> <p className='text-sm text-gray-700'>0{activeIndex + 1} — 0{Testimonials.length}</p> <ArrowRight className='rounded-full border border-stone-400 p-2 text-3xl transition-all duration-200 hover:border-stone-800' size={40} onClick={handleNext} /> </div>
       <div className="mt-[20%] flex -translate-x-[25%] items-center gap-6 overflow-x-hidden">
         {Testimonials.filter((e) => Testimonials.indexOf(e) !== activeIndex).map((e, i) => <div key={i} className={cn('w-1/2', { 'order-last': activeIndex !== 1 && i === 0 })}><Carousel activeIndex={Testimonials.indexOf(e)} /></div>)}
       </div>
@@ -44,7 +44,7 @@ const Testimonial: FC<TestimonialProps> = ({ }) => {
       {/* <Image src={mattWalker} alt='mattw walker' />  */}
     </div>
     {!isLargeScreen &&
-      <div className="flex w-full items-center justify-between gap-8 pb-7 lg:pt-3">  <p className='text-sm text-gray-700'>0{activeIndex + 1} - 0{Testimonials.length}</p> <div className='flex items-center gap-4'><ArrowLeft className='rounded-full border border-stone-400 p-2 text-3xl transition-all duration-200 hover:border-stone-800' size={40} onClick={handlePrev} /> <ArrowRight className='rounded-full border border-stone-400 p-2 text-3xl transition-all duration-200 hover:border-stone-800' size={40} onClick={handleNext} /></div></div>
+      <div className="flex w-full items-center justify-between gap-8 pb-7 lg:pt-3">  <p className='text-sm text-gray-700'>0{activeIndex + 1} — 0{Testimonials.length}</p> <div className='flex items-center gap-4'><ArrowLeft className='rounded-full border border-stone-400 p-2 text-3xl transition-all duration-200 hover:border-stone-800' size={40} onClick={handlePrev} /> <ArrowRight className='rounded-full border border-stone-400 p-2 text-3xl transition-all duration-200 hover:border-stone-800' size={40} onClick={handleNext} /></div></div>
     }
     <div className="flex flex-col justify-center gap-4 lg:px-16">
 
