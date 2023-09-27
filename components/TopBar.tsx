@@ -18,8 +18,8 @@ const TopBar: FC<TopBarProps> = ({ isOpen }) => {
             document.documentElement.style.overflow = 'hidden';
         }
         else {
-            document.documentElement.style.overflowY = 'scroll'; document.documentElement.style.overflowX = 'hidden'
-            document.body.style.filter = 'none';
+            document.documentElement.style.overflowY = 'scroll';
+             document.documentElement.style.overflowX = 'hidden'
         }
 
 

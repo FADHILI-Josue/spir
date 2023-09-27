@@ -20,9 +20,8 @@ const MainTemplate: FC<MainTemplateProps> = ({ children, isMain = false }) => {
     const path = pathname.split("/")[1];
     setActive(path);
   }, [router]);
-  const {isOpen} = useConfig()
 
-  return <div className={cn('w-full flex flex-col items-center')}>
+  return <div className={cn('w-full flex flex-col items-center ')}>
     {!isMain && <Navbar />} 
     {children}
   </div>

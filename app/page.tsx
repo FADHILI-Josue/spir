@@ -24,7 +24,8 @@ import MovingRectangle from '@/components/SideScroll'
 
 export default function Home() {
   return (
-    <main className='relative overflow-x-hidden flex w-full flex-col'>
+    <main className='relative w-full large:overflow-hidden'>
+        
       <MovingRectangle size={23} />
       <MainTemplate isMain>
         <ScrollHeader />
