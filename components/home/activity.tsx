@@ -51,14 +51,14 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
     const { ref } = useSectionInView("fitness");
     const isLargeScreen = useIsLargeScreen()
 
-    return <div className={cn('w-full z-0 flex flex-col lg:flex-row  lg:justify-between lg:pr-20 pb-20 lg:pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
+    return <div className={cn('w-full z-0 flex flex-col lg:flex-row  lg:justify-between pb-20 lg:pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }} ref={ref}>
         <div className='flex-col items-center lg:max-w-[50%] large:flex'>
             <Image src={fitness} alt='sleeping man' />
             {!isLargeScreen && <div className='h-[60vh] md:h-[80vh] -translate-y-[21%]'>
                 <PhoneForMobile image={runningPhone} />
             </div>}
         </div>
-        <div className='ml-10 flex flex-col gap-4 lg:max-w-[25%] mx-10 md:mx-28'>
+        <div className='ml-16 flex flex-col gap-4 lg:max-w-[25%] mx-10 md:mx-28'>
             <div className="flex items-center gap-3">
                 <FireIcon color={color === '#D0ECF5' ? '#101926' : '#D0ECF5'} />
                 <span className={cn(color === '#D0ECF5' ? 'text-stone-700' : 'text-[#D0ECF5]')}>Activity</span>
