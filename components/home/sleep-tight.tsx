@@ -73,7 +73,6 @@ const Sleeptight: FC<BestForBodySectionProps> = ({ }) => {
                 </div>)
                 }
             </div>
-            {/* ref={topRef} to the last element */}
         </div>
         <div className='flex flex-col items-center lg:max-w-[50%]'>
                 <Image src={SleepingMan} alt='sleeping man' className=''/>

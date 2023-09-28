@@ -19,7 +19,6 @@ const PhoneForMobile: FC<PhoneForMobileProps> = ({ image }) => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1 }}
                         src={image} alt='spir phone image' />
-                    {/* <Image src={image}  alt='oura home phone image' className='h-full w-full object-contain fade-in-out transition-opacity duration-500' /> */}
                 </div>
             : null
         }

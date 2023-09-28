@@ -59,7 +59,6 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
             </div>}
         </div>
         <div className='ml-10 flex flex-col gap-4 lg:max-w-[25%] mx-10 md:mx-28'>
-            {/* <div className='lg:ml-10 flex  lg:max-w-[25%] flex-col gap-4'> */}
             <div className="flex items-center gap-3">
                 <FireIcon color={color === '#D0ECF5' ? '#101926' : '#D0ECF5'} />
                 <span className={cn(color === '#D0ECF5' ? 'text-stone-700' : 'text-[#D0ECF5]')}>Activity</span>
@@ -69,7 +68,6 @@ const Activity: FC<ActivitySectionProps> = ({ }) => {
                 Whether you’re running a marathon or running an errand, Spir tracks your movement, steps, heart rate, and recovery. Discover your ideal balance between activity and recovery to reach your personal fitness goals.
             </h1>
             <Button variant={'outline'} size={'lg'} ref={topRef} className={cn('rounded-full w-fit my-4', 'text-[#101926] border-slate-600 hover:bg-[#101926] hover:text-white')}>More About Activity</Button>
-            {/* ref={topRef} to the last element */}
         </div>
     </div>
 }

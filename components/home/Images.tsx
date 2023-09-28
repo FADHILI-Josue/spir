@@ -48,9 +48,6 @@ const Images: FC = () => {
         if (currentIndex < (length - 1)) {
             setCurrentIndex(prevState => prevState + 1)
         }
-        // else{
-        //   setCurrentIndex(0)
-        // }
     }
 
     const prev = () => {

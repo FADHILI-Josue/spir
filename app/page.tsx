@@ -37,7 +37,6 @@ export default function Home() {
         <HomeBanner />
         <div className="items z-0 mt-[70vh] flex w-full flex-col rounded-t-[2rem] bg-[#E6DED3]" >
           <Intro />
-          {/* IMAGES */}
           <div className='sticky top-0 -z-10 flex w-full flex-col items-center'>
             <Images />
           </div>

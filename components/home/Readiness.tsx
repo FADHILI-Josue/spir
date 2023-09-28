@@ -19,6 +19,7 @@ interface ReadinessSectionProps {
 
 const Readiness: FC<ReadinessSectionProps> = ({ }) => {
     const [reachTop, setreachTop] = useState(false);
+    const [isVisible, setisVisible] = useState(false);
 
 
     const topRef = useRef<HTMLDivElement | null>(null);
@@ -42,25 +43,23 @@ const Readiness: FC<ReadinessSectionProps> = ({ }) => {
         if (reachTop) {
             // setImage(runningPhone)
             setPhoneOpen(false)
+            setisVisible(true)
             // setColor('#D0ECF5')
             return true
         }
         setImage(readinessphone)
         setColor('#E6DED3')
         setPhoneOpen(true)
+        setisVisible(false)
         return false
     }, [reachTop])
     const isLargeScreen = useIsLargeScreen()
 
     return <div className='relative z-0 flex w-full flex-col items-center'>
-        {isLargeScreen && <div className={cn("border absolute w-[25%] z-30 border-black p-5 bg-black top-[12%] flex items-center justify-center rounded-[3rem] h-screen")} style={{ boxShadow: '5px 5px 5px black' }}>
-            <ImageComp initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-
-                transition={{ duration: 1 }}
+        {isLargeScreen && isVisible && <div className={cn("border absolute w-[25%] z-30 border-black p-5 bg-black top-[12%] flex items-center justify-center rounded-[3rem] h-screen")} style={{ boxShadow: '5px 5px 5px black' }}>
+            <ImageComp
                 src={readinessphone} alt='Spir phone image' />
 
-            {/* <Image src={image}  alt='oura home phone image' className='h-full w-full object-contain fade-in-out transition-opacity duration-500' /> */}
         </div>}
         <div className={cn('w-full z-0 flex flex-col lg:flex-row justify-between lg:pl-20 pb-20 lg:pb-44 items-center')} style={{ backgroundColor: color, transition: 'all 1s' }}>
             <div className='flex flex-col gap-4 lg:ml-10 lg:max-w-[27%] large:order-last mx-10 md:mx-28'>
@@ -78,11 +77,10 @@ const Readiness: FC<ReadinessSectionProps> = ({ }) => {
                         <p className={cn('text-md max-w-[10rem] lg:max-w-[7.3rem]', 'text-[#101926]')}>of Spir Members saw an improvement in their overall health.</p>
                     </div>
                 </div>
-                {/* ref={topRef} to the last element */}
             </div>
             <div className='flex flex-col items-center lg:max-w-[50%]'>
                 <Image src={readiness} alt='readiness photo' />
-                {!isLargeScreen && <div className='h-[60vh] md:h-[80vh] -translate-y-[21%]'>
+                {!isLargeScreen  && <div className='h-[60vh] md:h-[80vh] -translate-y-[21%]'>
                     <PhoneForMobile image={readinessphone} />
                 </div>}
             </div>

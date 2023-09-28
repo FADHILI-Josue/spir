@@ -1,11 +1,10 @@
 'use client'
-import { FC, useEffect, useRef, useState } from 'react'
-import { motion, useSpring } from 'framer-motion'
-import { ImageComp } from '../ImageComp'
 import { girlSleeping, girlSleepingMobile, girlWithTowel, girlWithTowelMobile, manWithOura, manWithOuraMobile } from '@/assets'
-import Image from 'next/image'
-import {useIsLargeScreen, useIsSmallScreen} from '@/hooks/isxScreen'
+import { useIsLargeScreen, useIsSmallScreen } from '@/hooks/isxScreen'
 import { useObserver } from '@/hooks/useObserver'
+import { motion, useSpring } from 'framer-motion'
+import Image from 'next/image'
+import { FC, useEffect, useRef, useState } from 'react'
 interface AccurateFingerProps {
 
 }
@@ -49,19 +48,6 @@ const AccurateFinger: FC<AccurateFingerProps> = ({ }) => {
                 <Image src={girlSleepingMobile} className='h-[80%] w-full -translate-y-10 large:object-contain' alt='man with phone openning spir app' />
                 <Image src={girlWithTowelMobile} className='h-[80%] w-full large:object-contain' alt='man with phone openning spir app' />
             </motion.div>}
-            {/* {!isLargeScreen && (
-  <motion.div
-    className='flex-nowrwap flex w-full items-center gap-3 pt-14'
-    style={{ transform: `translateX(${(scroll * 14) + 50}px)` }}
-    animate={{ scale: 1 }} // Increase frame rate
-    transition={{ stiffness: 150, damping: 25, restDelta: 10 }} // Adjust transition properties
-  >
-    <Image src={manWithOuraMobile} className='h-[80%] w-full large:object-contain' alt='man with phone opening spir app' />
-    <Image src={girlSleepingMobile} className='h-[80%] w-full -translate-y-10 large:object-contain' alt='man with phone opening spir app' />
-    <Image src={girlWithTowelMobile} className='h-[80%] w-full large:object-contain' alt='man with phone opening spir app' />
-  </motion.div>
-)} */}
-
             <p className='py-6 text-lg font-medium text-stone-700 lg:max-w-xl lg:pl-[20%] mx-10 md:mx-28'>The spir Ring is designed for accuracy above all because it measures from the palm side of your finger, where the pulse signal is strong to read from —much stronger than the wrist (Doctors measure your heart rate from your finger for a reason).</p>
         </div>
 {isLargeScreen &&        <>

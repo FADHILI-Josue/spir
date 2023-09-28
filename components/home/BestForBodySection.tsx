@@ -14,16 +14,6 @@ interface BestForBodySectionProps {
 }
 
 const BestForBodySection: FC<BestForBodySectionProps> = ({ }) => {
-    // const { ref, inView, entry } = useInView({
-    //     threshold: 1,
-    // });
-    // useEffect(()=>{
-    //     console.log(entry?.intersectionRatio)
-    //     entry?.intersectionRatio == 1 && console.log('yooooo')
-    // }, [entry?.intersectionRatio])
-
-
-    // const refa = useRef<HTMLDivElement>(null)
     const [reachTop, setreachTop] = useState(false);
     const { ref } = useSectionInView("bestForBody");
 
