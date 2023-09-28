@@ -1,5 +1,5 @@
 'use client'
-import useIsLargeScreen from '@/hooks/isLargeScreen'
+import {useIsLargeScreen} from '@/hooks/isxScreen'
 import { cn } from '@/lib/utils'
 import { FC, useEffect } from 'react'
 import { Button } from './ui/button'

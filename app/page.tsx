@@ -21,6 +21,7 @@ import Footer from '@/components/home/Footer'
 import Testimonial from '@/components/Testimonial'
 import ScrollHeader from '@/components/ScrollHeader'
 import MovingRectangle from '@/components/SideScroll'
+import Intro from '@/components/home/Intro'
 
 export default function Home() {
   return (
@@ -35,13 +36,7 @@ export default function Home() {
         <Navbar />
         <HomeBanner />
         <div className="items z-0 mt-[70vh] flex w-full flex-col rounded-t-[2rem] bg-[#E6DED3]" >
-          <div className='mb-10 mt-20 flex w-full flex-col justify-around gap-5 px-8 md:px-[20%] lg:flex-row lg:items-start lg:gap-0 lg:px-10'>
-            <h1 className='text-4xl font-light leading-tight text-slate-900 lg:max-w-md lg:text-5xl'>Your health. Your style. Your way.</h1>
-            <div className="flex flex-col justify-between gap-5">
-              <p className='text-lg text-gray-900 lg:max-w-sm'>Sleek, comfortable, accurate. spir fits seamlessly into your life, all night and all day.</p>
-              <Button className='w-fit rounded-full px-4 py-2' variant={'outline'} size={'lg'}>Shop Now</Button>
-            </div>
-          </div>
+          <Intro />
           {/* IMAGES */}
           <div className='sticky top-0 -z-10 flex w-full flex-col items-center'>
             <Images />

@@ -7,7 +7,7 @@ import { Testimonials } from '@/costants'
 import Image from 'next/image'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import useIsLargeScreen from '@/hooks/isLargeScreen'
+import {useIsLargeScreen} from '@/hooks/isxScreen'
 import TestimonialText from './TestimonialText'
 
 interface TestimonialProps {

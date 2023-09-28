@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { FC, useEffect, useRef, useState } from 'react'
 import { Button } from '../ui/button'
-import useIsLargeScreen from '@/hooks/isLargeScreen'
+import {useIsLargeScreen} from '@/hooks/isxScreen'
 
 interface OuraJourneyProps {
 

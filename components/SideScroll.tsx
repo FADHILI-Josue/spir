@@ -1,5 +1,5 @@
 'use client'
-import useIsLargeScreen from '@/hooks/isLargeScreen';
+import {useIsLargeScreen} from '@/hooks/isxScreen';
 import React, { useEffect, useMemo, useState } from 'react';
 
 interface MovingRectangleProps {

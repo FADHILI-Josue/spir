@@ -9,7 +9,7 @@ import Sleepicon from '../ui/sleepicon';
 import FireIcon from '../ui/FireIcon';
 import { useConfig } from '@/context/configProvider';
 import { useSectionInView } from '@/hooks/ActiveSection';
-import useIsLargeScreen from '@/hooks/isLargeScreen';
+import {useIsLargeScreen} from '@/hooks/isxScreen';
 import PhoneForMobile from '../PhoneForMobile';
 
 

@@ -3,7 +3,7 @@ import { homePhone, sleepPhone } from '@/assets';
 import { Button } from '@/components/ui/button'
 import { useConfig } from '@/context/configProvider';
 import { useSectionInView } from '@/hooks/ActiveSection';
-import useIsLargeScreen from '@/hooks/isLargeScreen';
+import {useIsLargeScreen} from '@/hooks/isxScreen';
 import { cn } from '@/lib/utils';
 import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import PhoneForMobile from '../PhoneForMobile';

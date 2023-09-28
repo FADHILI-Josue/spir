@@ -1,6 +1,6 @@
 'use client'
 import { BannerBg, MobileBannerBg } from '@/assets'
-import useIsLargeScreen from '@/hooks/isLargeScreen'
+import {useIsLargeScreen} from '@/hooks/isxScreen'
 import Image from 'next/image'
 import { FC } from 'react'
 

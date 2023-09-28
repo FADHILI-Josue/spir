@@ -6,7 +6,7 @@ import { Button } from './ui/button';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import { useConfig } from '@/context/configProvider';
 import { homePhone, readinessphone, runningPhone, sleepPhone } from '@/assets';
-import useIsLargeScreen from '@/hooks/isLargeScreen';
+import {useIsLargeScreen} from '@/hooks/isxScreen';
 import MenuIcon from './MenuIcon';
 import TopBar from './TopBar';
 import { useCycle } from 'framer-motion';

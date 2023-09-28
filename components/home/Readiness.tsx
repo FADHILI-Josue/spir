@@ -9,7 +9,7 @@ import Sleepicon from '../ui/sleepicon';
 import LeavesIcon from '../ui/leavesIcon';
 import { useConfig } from '@/context/configProvider';
 import { ImageComp } from '../ImageComp';
-import useIsLargeScreen from '@/hooks/isLargeScreen';
+import {useIsLargeScreen} from '@/hooks/isxScreen';
 import PhoneForMobile from '../PhoneForMobile';
 
 

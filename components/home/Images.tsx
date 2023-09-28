@@ -1,8 +1,9 @@
 'use client'
-import { FC, useEffect, useState } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { FC, useEffect, useRef, useState } from 'react'
+import {motion} from 'framer-motion'
 import Image, { StaticImageData } from 'next/image';
 import { BannerBg, blackIcon, blackRing, goldIcon, goldRing, roseGold, roseGoldIcon, silverIcon, sliverRing, stealthIcon, stealthRing } from '@/assets';
+import { useObserver } from '@/hooks/useObserver';
 
 const Images: FC = () => {
 
@@ -87,7 +88,15 @@ const Images: FC = () => {
         setTouchPosition(null)
     }
 
-    return <section className='w-[96%]'>
+    const ref = useRef<HTMLDivElement>(null);
+    const { isVisible } = useObserver<HTMLDivElement>({ref})
+
+
+    return <motion.section className='w-[96%]'
+    initial={{ opacity: 0, y: 100 }}
+    animate={{ opacity: isVisible ? 1 : 0 , y: 0 }}
+    transition={{ delay: 0, duration: 0.5 }}
+    ref={ref}>
         <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} className="group relative mx-auto sm:col-span-2 sm:self-center lg:col-span-1">
             <div className="supsmall:h-52 supsmall:w-52 relative inline-flex h-[80vh] overflow-hidden">
                 {landingImages?.map((e, i) =>
@@ -102,7 +111,7 @@ const Images: FC = () => {
                      </div>)}
             </div>
         </div>
-    </section>
+    </motion.section>
 }
 
 export default Images
