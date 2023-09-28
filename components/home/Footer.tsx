@@ -18,7 +18,7 @@ const Footer: FC<FooterProps> = ({ }) => {
                 <div className=''><Logo /></div>
                 <h3 className='mb-12 mt-20 md:max-w-[70%] text-xl text-main'>Receive the latest articles, tips, and offers from Spir</h3>
                 <EmailInput />
-                <p className='my-5 text-sm text-main'>We care about protecting your data. <br />Read more in our <Link href={'https://ouraring.com/privacy-policy'} className='underline'>Privacy policy.</Link></p>
+                <p className='my-5 text-sm text-main'>We care about protecting your data. <br />Read more in our <Link href={'https://spir.com/privacy-policy'} className='underline'>Privacy policy.</Link></p>
             </div>
             <div className='flex w-full cursor-pointer flex-col lg:hidden'>
 
@@ -65,8 +65,8 @@ const Footer: FC<FooterProps> = ({ }) => {
         </div>
         <div className="mx-8 my-10 flex flex-col md:flex-row justify-between lg:ml-32 lg:mr-5 large:gap-2">
             <div className="text-sm text-stone-500 order-last md:order-1">
-                <p>© 2023 Ōura Health Oy. All Rights Reserved.</p>
-                <p>ŌURA and Spir and Ō are trademarks of Ōura Health Oy and may not be used without permission.</p>
+                <p>© 2023 Spîr Health Oy. All Rights Reserved.</p>
+                <p>Spîr are trademarks of Spîr Health Oy and may not be used without permission.</p>
             </div>
             <div className="flex flex-wrap gap-3 text-sm text-main">
                 {loweFooterData.map((e, i) => <Link key={i} href={e.link}>{e.title}</Link>)}
