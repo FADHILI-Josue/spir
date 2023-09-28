@@ -28,7 +28,7 @@ const Navbar: FC<NavbarProps> = () => {
     </div>
     <div className='flex items-center space-x-8'>
       {isLargeScreen && navbarLinks?.filter((e) => e.name !== 'Home').map((e, i) => <Link key={i} href={e.href} className='navlink text-sm'>{e.name}</Link>)}
-      <Link href={''} className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'rounded-full', { 'mr-8': isLargeScreen })}>shop now</Link>
+      <Link href={'#'} className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'rounded-full', { 'mr-8': isLargeScreen })}>shop now</Link>
     </div>
   </div>
 }
