@@ -68,7 +68,7 @@ export default function Home() {
           <div className='flex w-full flex-col items-center bg-[#E6DED3] px-10 md:px-24 pb-20  lg:px-36'>
             <div className="grid w-full grid-cols-1 gap-20 lg:grid-cols-3">
               {devotions.map((e, i) => <div key={i} className='space-y-5'>
-                <Image src={e.image} alt={e.title} />
+                <Image src={e.image} alt={e.title} className='w-full'/>
                 <h2 className='text-lg font-medium'>{e.title}</h2>
                 <p className=''>{e.desc}</p>
               </div>)}
